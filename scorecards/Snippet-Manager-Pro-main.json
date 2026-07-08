@@ -1,0 +1,357 @@
+{
+  "repo": "Snippet-Manager-Pro-main",
+  "path": "C:\\Users\\jomie\\workspace\\Snippet-Manager-Pro-main",
+  "audited_at": "2026-06-16T07:41:16.378445+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 1,
+  "angles": [
+    {
+      "grade": "D",
+      "findings": [
+        {
+          "id": "SEC-HARDCODED-SECRET",
+          "msg": "3 possible hardcoded secret(s) outside tests/blog/prose/example",
+          "fix": "Move to env vars / secret manager, rotate"
+        },
+        {
+          "id": "SEC-INJECTION-SINK",
+          "msg": "6 possible injection sink(s) outside tests/blog/build-scripts",
+          "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "backend-example\\tests\\team-accept-invitation-contract.test.js",
+            "line": 200,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "backend-example\\tests\\team-accept-invitation-contract.test.js",
+            "line": 234,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "backend-example\\tests\\team-accept-invitation-contract.test.js",
+            "line": 250,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "backend-example\\tests\\team-accept-invitation-contract.test.js",
+            "line": 282,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "backend-example\\tests\\team-invite-license-flow.test.js",
+            "line": 144,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "backend-example\\tests\\team-invite-license-flow.test.js",
+            "line": 153,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "backend-example\\tests\\team-resend-invitation-id.test.js",
+            "line": 111,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "e2e-tests\\fixtures\\test-data.ts",
+            "line": 113,
+            "kind": "aws-access-key",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "e2e-tests\\fixtures\\test-data.ts",
+            "line": 118,
+            "kind": "openai-style-key",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "e2e-tests\\fixtures\\test-data.ts",
+            "line": 128,
+            "kind": "private-key-block",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": [
+          {
+            "file": "e2e\\extension.spec.ts",
+            "line": 360,
+            "kind": "py-eval",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "firefox-extension\\components\\workflows-dashboard.js",
+            "line": 563,
+            "kind": "sql-string-concat",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "firefox-extension\\components\\team\\handlers\\MemberActionHandlers.js",
+            "line": 399,
+            "kind": "sql-string-concat",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "scripts\\build-firefox.js",
+            "line": 134,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "scripts\\build-firefox.js",
+            "line": 161,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "scripts\\build-safari.js",
+            "line": 119,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "scripts\\build-safari.js",
+            "line": 122,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "scripts\\build-safari.js",
+            "line": 126,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "scripts\\package-firefox.js",
+            "line": 52,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "scripts\\run-chrome-readiness-audit.mjs",
+            "line": 81,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          }
+        ]
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.@babel/core = '^7.23.0' (floating)",
+          "fix": "Pin @babel/core to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.@babel/preset-env = '^7.23.0' (floating)",
+          "fix": "Pin @babel/preset-env to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.@commitlint/cli = '^20.5.0' (floating)",
+          "fix": "Pin @commitlint/cli to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.@commitlint/config-conventional = '^20.5.0' (floating)",
+          "fix": "Pin @commitlint/config-conventional to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.babel-jest = '^29.7.0' (floating)",
+          "fix": "Pin babel-jest to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.bestzip = '^2.2.1' (floating)",
+          "fix": "Pin bestzip to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.esbuild = '^0.27.3' (floating)",
+          "fix": "Pin esbuild to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.eslint = '^8.56.0' (floating)",
+          "fix": "Pin eslint to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.jest = '^29.7.0' (floating)",
+          "fix": "Pin jest to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.jest-environment-jsdom = '^29.7.0' (floating)",
+          "fix": "Pin jest-environment-jsdom to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.lint-staged = '^16.4.0' (floating)",
+          "fix": "Pin lint-staged to an exact version for reproducible builds"
+        }
+      ],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEAD-DEBUG-NOISE",
+          "msg": "478 debug print/console.log statements",
+          "fix": "Remove debug prints; rely on a real logger"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "debug_count": 478,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "AGENTS.md",
+            "line": 381,
+            "kind": "node-console-log",
+            "text": "console.log('Sync result:', response);"
+          },
+          {
+            "file": "AGENTS.md",
+            "line": 939,
+            "kind": "node-console-log",
+            "text": "console.log('Sync complete:', response);"
+          },
+          {
+            "file": "AGENTS.md",
+            "line": 1237,
+            "kind": "node-console-log",
+            "text": "console.log('License:', data.license);"
+          },
+          {
+            "file": "AGENTS.md",
+            "line": 1238,
+            "kind": "node-console-log",
+            "text": "console.log('Tier:', data.license?.tier); // Should be 'pro' or 'team'"
+          },
+          {
+            "file": "AGENTS.md",
+            "line": 1248,
+            "kind": "node-console-log",
+            "text": "console.log('Last synced:', status.lastSyncedAt);"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo (6 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [],
+        "py_files": 6,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "repo": "Obsidian-Vault-Local",
+  "path": "C:\\Users\\jomie\\workspace\\Obsidian-Vault-Local",
+  "audited_at": "2026-06-16T07:40:57.858553+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "tests\\test_credential_leak_scanner.py",
+            "line": 41,
+            "kind": "github-pat",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_credential_leak_scanner.py",
+            "line": 70,
+            "kind": "openai-style-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_credential_leak_scanner.py",
+            "line": 86,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_credential_leak_scanner.py",
+            "line": 99,
+            "kind": "private-key-block",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_credential_leak_scanner.py",
+            "line": 103,
+            "kind": "private-key-block",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_credential_leak_scanner.py",
+            "line": 107,
+            "kind": "private-key-block",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_credential_leak_scanner.py",
+            "line": 202,
+            "kind": "github-pat",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo with Makefile (lint target present)"
+      ],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEAD-DEBUG-NOISE",
+          "msg": "171 debug print/console.log statements",
+          "fix": "Remove debug prints; rely on a real logger"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "debug_count": 171,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+            "line": 593,
+            "kind": "py-print",
+            "text": "print(\"=\" * 70)"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+            "line": 594,
+            "kind": "py-print",
+            "text": "print(\"AGENT VAULT DEDUPLICATION REPORT\")"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+            "line": 595,
+            "kind": "py-print",
+            "text": "print(f\"Generated: {report['timestamp']}\")"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+            "line": 596,
+            "kind": "py-print",
+            "text": "print(f\"Vault: {report['vault']}\")"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+            "line": 597,
+            "kind": "py-print",
+            "text": "print(\"=\" * 70)"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "C",
+      "findings": [
+        {
+          "id": "ERR-BARE-EXCEPT",
+          "msg": "23 bare except/empty catch",
+          "fix": "Catch specific exceptions; log or re-raise"
+        }
+      ],
+      "notes": [
+        "Python repo (16 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+            "line": 63,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+            "line": 71,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+            "line": 411,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\vault_dedup.py",
+            "line": 66,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\vault_dedup.py",
+            "line": 75,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\vault_search.py",
+            "line": 103,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\vault_search.py",
+            "line": 234,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "03-Infrastructure\\scripts\\vault_search.py",
+            "line": 247,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "04-Agents\\vault_health.py",
+            "line": 179,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "04-Agents\\vault_sync.py",
+            "line": 118,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 16,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

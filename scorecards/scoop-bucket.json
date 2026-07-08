@@ -1,0 +1,93 @@
+{
+  "repo": "scoop-bucket",
+  "path": "C:\\Users\\jomie\\workspace\\scoop-bucket",
+  "audited_at": "2026-06-16T07:41:10.890875+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 1,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Content repo (no code) \u2014 dependencies n/a"
+      ],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "D",
+      "findings": [
+        {
+          "id": "TEST-NO-TESTS",
+          "msg": "No tests directory and no real test script",
+          "fix": "Add a tests/ folder and a test runner"
+        }
+      ],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "debug_count": 0,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "swallowers": [],
+        "py_files": 0,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DOC-NO-TEST-INSTR",
+          "msg": "README does not mention test command",
+          "fix": "Add test instructions"
+        }
+      ],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Content repo (no code) \u2014 release n/a"
+      ],
+      "angle": "release"
+    }
+  ]
+}

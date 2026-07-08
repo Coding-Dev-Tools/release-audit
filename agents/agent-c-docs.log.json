@@ -1,0 +1,332 @@
+[
+  {
+    "repo": "agent-os",
+    "kind": "other",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "Agent_Memory_Final",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "api-contract-guardian",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "apiauth",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "awesome-python-fork",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools-revenueholdings.dev",
+    "kind": "other",
+    "content": true,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools.github.io",
+    "kind": "other",
+    "content": true,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "configdrift",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "context-mode",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "crossrepo-dep-manager",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "datamorph",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "deploydiff",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "devforge-cli",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "devforge-core",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "envault",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "hermes-agent-review",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "hermes-workspace",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "homebrew-tap",
+    "kind": "other",
+    "content": true,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "infra-scripts",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "json2sql",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "keybridge",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "Obsidian-Vault-Local",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "openclaw",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "profitmax-pro",
+    "kind": "python",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "pypi-index",
+    "kind": "other",
+    "content": true,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "revenue-dashboard",
+    "kind": "other",
+    "content": true,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "revenueholdings.dev",
+    "kind": "other",
+    "content": true,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "rtk-command-code",
+    "kind": "other",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "SaaS-Churn-Predictor",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "schemaforge",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "scoop-bucket",
+    "kind": "other",
+    "content": true,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "skipped: content repo or no kind"
+    ]
+  },
+  {
+    "repo": "Snippet-Manager-Pro-main",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  },
+  {
+    "repo": "vscode-schemaforge",
+    "kind": "node",
+    "content": false,
+    "actions": [
+      "ok: Install section present",
+      "ok: Test section present",
+      "ok: tests/ has test files"
+    ]
+  }
+]

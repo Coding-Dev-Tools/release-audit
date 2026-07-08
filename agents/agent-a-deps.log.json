@@ -1,0 +1,382 @@
+[
+  {
+    "repo": "agent-os",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "Agent_Memory_Final",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "api-contract-guardian",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "pnpm-install-lockfile-only",
+        "cmd": "pnpm install --lockfile-only --ignore-scripts",
+        "returncode": -1,
+        "error": "[WinError 2] The system cannot find the file specified"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "apiauth",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "awesome-python-fork",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools-revenueholdings.dev",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools.github.io",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "configdrift",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "pnpm-install-lockfile-only",
+        "cmd": "pnpm install --lockfile-only --ignore-scripts",
+        "returncode": -1,
+        "error": "[WinError 2] The system cannot find the file specified"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "context-mode",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "pnpm-install-lockfile-only",
+        "cmd": "pnpm install --lockfile-only --ignore-scripts",
+        "returncode": -1,
+        "error": "[WinError 2] The system cannot find the file specified"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "crossrepo-dep-manager",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "datamorph",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "pnpm-install-lockfile-only",
+        "cmd": "pnpm install --lockfile-only --ignore-scripts",
+        "returncode": -1,
+        "error": "[WinError 2] The system cannot find the file specified"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "deploydiff",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "pnpm-install-lockfile-only",
+        "cmd": "pnpm install --lockfile-only --ignore-scripts",
+        "returncode": -1,
+        "error": "[WinError 2] The system cannot find the file specified"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "devforge-cli",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "uv-lock",
+        "cmd": "uv lock",
+        "returncode": 1,
+        "stdout_tail": "",
+        "stderr_tail": "Using CPython 3.11.15\n  \u00c3\u2014 No solution found when resolving dependencies:\n  \u00e2\u2022\u00b0\u00e2\u201d\u20ac\u00e2\u2013\u00b6 Because api-contract-guardian was not found in the package registry and\n      devforge[all] depends on api-contract-guardian>=0.1.0, we can conclude\n      that devforge[all]'s requirements are unsatisfiable.\n      And because your project requires devforge[all], we can conclude that\n      your project's requirements are unsatisfiable.\n"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "devforge-core",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "envault",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "package-lock.json"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "hermes-agent-review",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "package-lock.json",
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "hermes-workspace",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "pnpm-lock.yaml"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "homebrew-tap",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "infra-scripts",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "json2sql",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "pnpm-install-lockfile-only",
+        "cmd": "pnpm install --lockfile-only --ignore-scripts",
+        "returncode": -1,
+        "error": "[WinError 2] The system cannot find the file specified"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "keybridge",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "pnpm-install-lockfile-only",
+        "cmd": "pnpm install --lockfile-only --ignore-scripts",
+        "returncode": -1,
+        "error": "[WinError 2] The system cannot find the file specified"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "Obsidian-Vault-Local",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "openclaw",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "pnpm-lock.yaml"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "profitmax-pro",
+    "kind": "python",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "uv.lock"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "pypi-index",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "revenue-dashboard",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "revenueholdings.dev",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "rtk-command-code",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "SaaS-Churn-Predictor",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "package-lock.json"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "schemaforge",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "pnpm-install-lockfile-only",
+        "cmd": "pnpm install --lockfile-only --ignore-scripts",
+        "returncode": -1,
+        "error": "[WinError 2] The system cannot find the file specified"
+      }
+    ],
+    "lockfiles_after": []
+  },
+  {
+    "repo": "scoop-bucket",
+    "kind": "other",
+    "actions": [
+      {
+        "step": "skip-other"
+      }
+    ]
+  },
+  {
+    "repo": "Snippet-Manager-Pro-main",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "package-lock.json"
+        ]
+      }
+    ]
+  },
+  {
+    "repo": "vscode-schemaforge",
+    "kind": "node",
+    "actions": [
+      {
+        "step": "skip-lockfile-exists",
+        "lockfiles": [
+          "package-lock.json"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "repo": "Coding-Dev-Tools-revenueholdings.dev",
+  "path": "C:\\Users\\jomie\\workspace\\Coding-Dev-Tools-revenueholdings.dev",
+  "audited_at": "2026-06-16T07:40:10.894119+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 1,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "blog\\preview-infra-cost-before-deploy.html",
+            "line": 142,
+            "kind": "literal-secret",
+            "in_test": false,
+            "in_blog": true,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Content repo (no code) \u2014 dependencies n/a"
+      ],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "D",
+      "findings": [
+        {
+          "id": "TEST-NO-TESTS",
+          "msg": "No tests directory and no real test script",
+          "fix": "Add a tests/ folder and a test runner"
+        }
+      ],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "4 debug print(s) - low noise"
+      ],
+      "raw": {
+        "debug_count": 4,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "blog\\click-to-mcp-usage-guide.html",
+            "line": 355,
+            "kind": "py-print",
+            "text": "print(json.dumps(tools, indent=2))"
+          },
+          {
+            "file": "blog\\click-to-mcp-usage-guide.html",
+            "line": 372,
+            "kind": "py-print",
+            "text": "print(result)</code></pre>"
+          },
+          {
+            "file": "blog\\click-vs-typer-vs-argparse-python-cli.html",
+            "line": 132,
+            "kind": "py-print",
+            "text": "print(f\"Processing {args.input} -> {args.output}\")</code></pre>"
+          },
+          {
+            "file": "blog\\five-productivity-workflows-cli-suite.html",
+            "line": 141,
+            "kind": "py-print",
+            "text": "print(json.dumps(data))"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "swallowers": [],
+        "py_files": 0,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DOC-NO-TEST-INSTR",
+          "msg": "README does not mention test command",
+          "fix": "Add test instructions"
+        }
+      ],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Content repo (no code) \u2014 release n/a"
+      ],
+      "angle": "release"
+    }
+  ]
+}

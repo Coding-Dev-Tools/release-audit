@@ -1,0 +1,233 @@
+[
+  {
+    "repo": "agent-os",
+    "kind": "other",
+    "actions": [
+      "skip: other kind"
+    ]
+  },
+  {
+    "repo": "Agent_Memory_Final",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "api-contract-guardian",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "apiauth",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "awesome-python-fork",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools-revenueholdings.dev",
+    "kind": "content",
+    "actions": [
+      "skip: content repo"
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools.github.io",
+    "kind": "content",
+    "actions": [
+      "skip: content repo"
+    ]
+  },
+  {
+    "repo": "configdrift",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "context-mode",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "crossrepo-dep-manager",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "datamorph",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "deploydiff",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "devforge-cli",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "devforge-core",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "envault",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "hermes-agent-review",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "hermes-workspace",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "homebrew-tap",
+    "kind": "content",
+    "actions": [
+      "skip: content repo"
+    ]
+  },
+  {
+    "repo": "infra-scripts",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "json2sql",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "keybridge",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "Obsidian-Vault-Local",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "openclaw",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "profitmax-pro",
+    "kind": "python",
+    "actions": [
+      "ok: Makefile present and has lint/test"
+    ]
+  },
+  {
+    "repo": "pypi-index",
+    "kind": "content",
+    "actions": [
+      "skip: content repo"
+    ]
+  },
+  {
+    "repo": "revenue-dashboard",
+    "kind": "content",
+    "actions": [
+      "skip: content repo"
+    ]
+  },
+  {
+    "repo": "revenueholdings.dev",
+    "kind": "content",
+    "actions": [
+      "skip: content repo"
+    ]
+  },
+  {
+    "repo": "rtk-command-code",
+    "kind": "other",
+    "actions": [
+      "skip: other kind"
+    ]
+  },
+  {
+    "repo": "SaaS-Churn-Predictor",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "schemaforge",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "scoop-bucket",
+    "kind": "content",
+    "actions": [
+      "skip: content repo"
+    ]
+  },
+  {
+    "repo": "Snippet-Manager-Pro-main",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  },
+  {
+    "repo": "vscode-schemaforge",
+    "kind": "node",
+    "actions": [
+      "ok: package.json has a non-noop lint script"
+    ]
+  }
+]

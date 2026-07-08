@@ -1,0 +1,103 @@
+{
+  "repo": "profitmax-pro",
+  "path": "C:\\Users\\jomie\\workspace\\profitmax-pro",
+  "audited_at": "2026-06-16T07:41:08.641193+00:00",
+  "overall_grade": "A",
+  "angles_passing": 8,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo with Makefile (lint target present)"
+      ],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "1 debug print(s) - low noise"
+      ],
+      "raw": {
+        "debug_count": 1,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "pai\\ceo_runner.py",
+            "line": 97,
+            "kind": "py-print",
+            "text": "print(json.dumps(result, indent=2, default=str))"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "B",
+      "findings": [],
+      "notes": [
+        "Python repo (11 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "pai\\llm_router.py",
+            "line": 62,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "pai\\llm_router.py",
+            "line": 88,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 11,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

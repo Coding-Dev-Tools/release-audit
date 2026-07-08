@@ -1,0 +1,104 @@
+{
+  "repo": "devforge-core",
+  "path": "C:\\Users\\jomie\\workspace\\devforge-core",
+  "audited_at": "2026-06-16T07:40:14.126204+00:00",
+  "overall_grade": "A",
+  "angles_passing": 8,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo with Makefile (lint target present)"
+      ],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "2 debug print(s) - low noise"
+      ],
+      "raw": {
+        "debug_count": 2,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "src\\revenueholdings_core\\license.py",
+            "line": 131,
+            "kind": "py-print",
+            "text": "print(f\"Rate limit: {result.max_requests_per_hour}/hour\")"
+          },
+          {
+            "file": "src\\revenueholdings_core\\rate_limiter.py",
+            "line": 32,
+            "kind": "py-print",
+            "text": "print(\"Rate limit exceeded\")"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "B",
+      "findings": [],
+      "notes": [
+        "Python repo (8 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "src\\revenueholdings_core\\rate_limiter.py",
+            "line": 123,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 8,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

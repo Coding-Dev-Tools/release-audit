@@ -1,0 +1,182 @@
+{
+  "repo": "Agent_Memory_Final",
+  "path": "C:\\Users\\jomie\\workspace\\Agent_Memory_Final",
+  "audited_at": "2026-06-16T07:40:09.873235+00:00",
+  "overall_grade": "A",
+  "angles_passing": 8,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "tests\\unit\\test_account_factory.py",
+            "line": 162,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo with Makefile (lint target present)"
+      ],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEAD-DEBUG-NOISE",
+          "msg": "491 debug print/console.log statements",
+          "fix": "Remove debug prints; rely on a real logger"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "debug_count": 491,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "test_memory_scale.py",
+            "line": 19,
+            "kind": "py-print",
+            "text": "print(\"Starting agent memory scale test...\")"
+          },
+          {
+            "file": "test_memory_scale.py",
+            "line": 24,
+            "kind": "py-print",
+            "text": "print(\"ERROR: ORCHESTRATOR_DSN environment variable not set\")"
+          },
+          {
+            "file": "test_memory_scale.py",
+            "line": 27,
+            "kind": "py-print",
+            "text": "print(f\"Using DSN: {dsn}\")"
+          },
+          {
+            "file": "test_memory_scale.py",
+            "line": 34,
+            "kind": "py-print",
+            "text": "print(\"\u2713 Successfully initialized OrchestratorStore and memory components\")"
+          },
+          {
+            "file": "test_memory_scale.py",
+            "line": 36,
+            "kind": "py-print",
+            "text": "print(f\"\u2717 Failed to initialize memory components: {e}\")"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "ERR-BARE-EXCEPT",
+          "msg": "9 bare except/empty catch",
+          "fix": "Catch specific exceptions; log or re-raise"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "api-contract-monitor\\backend\\app\\openapi_parser.py",
+            "line": 35,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "apps\\workers\\distribute\\worker.py",
+            "line": 204,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "apps\\workers\\monetize\\worker.py",
+            "line": 208,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "pai\\llm_router.py",
+            "line": 166,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "scripts\\seed_all_now.py",
+            "line": 146,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "scripts\\distribution\\engagement_engine.py",
+            "line": 116,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "src\\intelligent_knowledge_graph.py",
+            "line": 505,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "src\\intelligent_knowledge_graph.py",
+            "line": 536,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "src\\paperclip_learning.py",
+            "line": 397,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 279,
+        "has_logger_imports": true
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "repo": "infra-scripts",
+  "path": "C:\\Users\\jomie\\workspace\\infra-scripts",
+  "audited_at": "2026-06-16T07:40:56.875354+00:00",
+  "overall_grade": "A",
+  "angles_passing": 8,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo with Makefile (lint target present)"
+      ],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEAD-DEBUG-NOISE",
+          "msg": "201 debug print/console.log statements",
+          "fix": "Remove debug prints; rely on a real logger"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "debug_count": 201,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "check_all.py",
+            "line": 8,
+            "kind": "py-print",
+            "text": "print(f\"{i['identifier']:>8} UNASSIGNED   {i['priority']:>7} {i['title'][:55]}\")"
+          },
+          {
+            "file": "check_all.py",
+            "line": 11,
+            "kind": "py-print",
+            "text": "print(f\"{i['identifier']:>8} {s:>12} {i['priority']:>7} {i['title'][:55]}\")"
+          },
+          {
+            "file": "check_content.py",
+            "line": 4,
+            "kind": "py-print",
+            "text": "print(\"=== click-to-mcp ===\")"
+          },
+          {
+            "file": "check_content.py",
+            "line": 5,
+            "kind": "py-print",
+            "text": "print(\"index.html:\", \"Auto-wrap any Click or Typer CLI as an MCP server - one command. Your CLI is now a first-class AI "
+          },
+          {
+            "file": "check_content.py",
+            "line": 6,
+            "kind": "py-print",
+            "text": "print(\"docs.html:\", \"\")"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "B",
+      "findings": [],
+      "notes": [
+        "Python repo (18 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "openclaw-migration.py",
+            "line": 61,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "openclaw-migration.py",
+            "line": 69,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 18,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

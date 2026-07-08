@@ -1,0 +1,137 @@
+{
+  "repo": "pypi-index",
+  "path": "C:\\Users\\jomie\\workspace\\pypi-index",
+  "audited_at": "2026-06-16T07:41:08.797006+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "C",
+      "findings": [
+        {
+          "id": "SEC-INJECTION-SINK",
+          "msg": "1 possible injection sink(s) outside tests/blog/build-scripts",
+          "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [],
+        "sinks": [
+          {
+            "file": "rebuild-index.py",
+            "line": 44,
+            "kind": "py-subprocess-shell-true",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          }
+        ]
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Content repo (no code) \u2014 dependencies n/a"
+      ],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "debug_count": 7,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "rebuild-index.py",
+            "line": 56,
+            "kind": "py-print",
+            "text": "print(f\"=== Building {repo} ===\")"
+          },
+          {
+            "file": "rebuild-index.py",
+            "line": 61,
+            "kind": "py-print",
+            "text": "print(f\"  WARN: {repo} build failed: {e}\")"
+          },
+          {
+            "file": "rebuild-index.py",
+            "line": 137,
+            "kind": "py-print",
+            "text": "print(f\"\\nIndex generated: {len(packages)} packages\")"
+          },
+          {
+            "file": "rebuild-index.py",
+            "line": 139,
+            "kind": "py-print",
+            "text": "print(f\"  {name}/: {len(packages[name])} files\")"
+          },
+          {
+            "file": "rebuild-index.py",
+            "line": 147,
+            "kind": "py-print",
+            "text": "print(\"No changes to commit.\")"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo (2 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [],
+        "py_files": 2,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DOC-NO-TEST-INSTR",
+          "msg": "README does not mention test command",
+          "fix": "Add test instructions"
+        }
+      ],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Content repo (no code) \u2014 release n/a"
+      ],
+      "angle": "release"
+    }
+  ]
+}

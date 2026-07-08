@@ -1,0 +1,361 @@
+{
+  "repo": "hermes-workspace",
+  "path": "C:\\Users\\jomie\\workspace\\hermes-workspace",
+  "audited_at": "2026-06-16T07:40:56.535088+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 1,
+  "angles": [
+    {
+      "grade": "D",
+      "findings": [
+        {
+          "id": "SEC-HARDCODED-SECRET",
+          "msg": "5 possible hardcoded secret(s) outside tests/blog/prose/example",
+          "fix": "Move to env vars / secret manager, rotate"
+        },
+        {
+          "id": "SEC-INJECTION-SINK",
+          "msg": "5 possible injection sink(s) outside tests/blog/build-scripts",
+          "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "src\\lib\\provider-catalog.ts",
+            "line": 27,
+            "kind": "literal-secret",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "src\\lib\\provider-catalog.ts",
+            "line": 48,
+            "kind": "literal-secret",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "src\\lib\\provider-catalog.ts",
+            "line": 69,
+            "kind": "literal-secret",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "src\\lib\\provider-catalog.ts",
+            "line": 90,
+            "kind": "literal-secret",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "src\\lib\\provider-catalog.ts",
+            "line": 111,
+            "kind": "literal-secret",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "src\\routes\\api\\-mcp.test.ts",
+            "line": 124,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "src\\server\\mcp-normalize.test.ts",
+            "line": 205,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "src\\server\\mcp-normalize.test.ts",
+            "line": 264,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": [
+          {
+            "file": "vite.config.ts",
+            "line": 677,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "src\\server\\provider-usage.ts",
+            "line": 122,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "src\\server\\provider-usage.ts",
+            "line": 156,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "src\\server\\swarm-chat-reader.ts",
+            "line": 74,
+            "kind": "sql-string-concat",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "src\\server\\update-system.ts",
+            "line": 410,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "src\\server\\mcp-hub\\-trust.test.ts",
+            "line": 251,
+            "kind": "py-os-system",
+            "in_test": true,
+            "in_blog": false,
+            "in_build": false
+          }
+        ]
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@base-ui/react = '^1.1.0' (floating)",
+          "fix": "Pin @base-ui/react to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@hugeicons/core-free-icons = '^3.1.1' (floating)",
+          "fix": "Pin @hugeicons/core-free-icons to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@hugeicons/react = '^1.1.4' (floating)",
+          "fix": "Pin @hugeicons/react to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@lobehub/icons = '^5.0.1' (floating)",
+          "fix": "Pin @lobehub/icons to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@lobehub/icons-static-png = '^1.83.0' (floating)",
+          "fix": "Pin @lobehub/icons-static-png to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@monaco-editor/react = '^4.7.0' (floating)",
+          "fix": "Pin @monaco-editor/react to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@react-three/drei = '^10.7.7' (floating)",
+          "fix": "Pin @react-three/drei to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@react-three/fiber = '^9.6.1' (floating)",
+          "fix": "Pin @react-three/fiber to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@react-three/postprocessing = '^3.0.4' (floating)",
+          "fix": "Pin @react-three/postprocessing to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@react-three/rapier = '^2.2.0' (floating)",
+          "fix": "Pin @react-three/rapier to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@tailwindcss/vite = '^4.1.18' (floating)",
+          "fix": "Pin @tailwindcss/vite to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.class-variance-authority = '^0.7.1' (floating)",
+          "fix": "Pin class-variance-authority to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.clsx = '^2.1.1' (floating)",
+          "fix": "Pin clsx to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.ecctrl = '^1.0.97' (floating)",
+          "fix": "Pin ecctrl to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.electron-updater = '^6.6.2' (floating)",
+          "fix": "Pin electron-updater to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.framer-motion = '^12.36.0' (floating)",
+          "fix": "Pin framer-motion to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.marked = '^17.0.1' (floating)",
+          "fix": "Pin marked to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.motion = '^12.29.2' (floating)",
+          "fix": "Pin motion to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.motion-dom = '^12.36.0' (floating)",
+          "fix": "Pin motion-dom to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.motion-utils = '^12.36.0' (floating)",
+          "fix": "Pin motion-utils to an exact version for reproducible builds"
+        }
+      ],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEAD-DEBUG-NOISE",
+          "msg": "41 debug print/console.log statements",
+          "fix": "Remove debug prints; rely on a real logger"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "debug_count": 41,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "server-entry.js",
+            "line": 239,
+            "kind": "node-console-log",
+            "text": "console.log(`Hermes Workspace running at http://${bindHost}:${port}`)"
+          },
+          {
+            "file": "vite.config.ts",
+            "line": 110,
+            "kind": "node-console-log",
+            "text": "console.log("
+          },
+          {
+            "file": "vite.config.ts",
+            "line": 117,
+            "kind": "node-console-log",
+            "text": "console.log('[hermes-agent] Already running \u2014 reusing existing process')"
+          },
+          {
+            "file": "vite.config.ts",
+            "line": 136,
+            "kind": "node-console-log",
+            "text": "console.log(`[hermes-agent] Starting ${claudeBin} gateway run`)"
+          },
+          {
+            "file": "vite.config.ts",
+            "line": 152,
+            "kind": "node-console-log",
+            "text": "console.log("
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "B",
+      "findings": [],
+      "notes": [
+        "Python repo (3 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "src\\server\\pty-helper.py",
+            "line": 78,
+            "kind": "py-bare-except"
+          },
+          {
+            "file": "src\\server\\pty-helper.py",
+            "line": 111,
+            "kind": "py-bare-except"
+          }
+        ],
+        "py_files": 3,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

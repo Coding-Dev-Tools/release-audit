@@ -1,0 +1,236 @@
+{
+  "repo": "envault",
+  "path": "C:\\Users\\jomie\\workspace\\envault",
+  "audited_at": "2026-06-16T07:40:14.444813+00:00",
+  "overall_grade": "A",
+  "angles_passing": 8,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "tests\\test_cli.py",
+            "line": 1044,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_cli.py",
+            "line": 1055,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_cli.py",
+            "line": 1084,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_encrypt_formats.py",
+            "line": 10,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_encrypt_formats.py",
+            "line": 15,
+            "kind": "private-key-block",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_encrypt_formats.py",
+            "line": 25,
+            "kind": "private-key-block",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_envault.py",
+            "line": 673,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_security_audit.py",
+            "line": 102,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_security_audit.py",
+            "line": 108,
+            "kind": "private-key-block",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\test_security_audit.py",
+            "line": 169,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEAD-DEBUG-NOISE",
+          "msg": "33 debug print/console.log statements",
+          "fix": "Remove debug prints; rely on a real logger"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "debug_count": 33,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "_qa_repro_test.py",
+            "line": 15,
+            "kind": "py-print",
+            "text": "print(f\"exit_code: {result.exit_code}\")"
+          },
+          {
+            "file": "_qa_repro_test.py",
+            "line": 16,
+            "kind": "py-print",
+            "text": "print(f\"output: {result.output}\")"
+          },
+          {
+            "file": "_qa_repro_test.py",
+            "line": 17,
+            "kind": "py-print",
+            "text": "print(f\"hardcoded_credential in output: {'hardcoded_credential' in result.output}\")"
+          },
+          {
+            "file": "_qa_repro_test.py",
+            "line": 29,
+            "kind": "py-print",
+            "text": "print(f\"exit_code: {result.exit_code}\")"
+          },
+          {
+            "file": "_qa_repro_test.py",
+            "line": 30,
+            "kind": "py-print",
+            "text": "print(f\"output: {result.output}\")"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "ERR-BARE-EXCEPT",
+          "msg": "4 bare except/empty catch",
+          "fix": "Catch specific exceptions; log or re-raise"
+        }
+      ],
+      "notes": [
+        "Python repo (28 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "src\\envault\\encrypt.py",
+            "line": 173,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "src\\envault\\stores\\__init__.py",
+            "line": 206,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "src\\envault\\stores\\__init__.py",
+            "line": 226,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "src\\envault\\stores\\__init__.py",
+            "line": 238,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 28,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

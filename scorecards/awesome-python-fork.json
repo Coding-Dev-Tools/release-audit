@@ -1,0 +1,116 @@
+{
+  "repo": "awesome-python-fork",
+  "path": "C:\\Users\\jomie\\workspace\\awesome-python-fork",
+  "audited_at": "2026-06-16T07:40:10.504190+00:00",
+  "overall_grade": "A",
+  "angles_passing": 8,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo with Makefile (lint target present)"
+      ],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "debug_count": 15,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "website\\build.py",
+            "line": 666,
+            "kind": "py-print",
+            "text": "print(f\"Built site with {len(parsed_groups)} groups, {len(categories)} categories\")"
+          },
+          {
+            "file": "website\\build.py",
+            "line": 667,
+            "kind": "py-print",
+            "text": "print(f\"Total entries: {total_entries}\")"
+          },
+          {
+            "file": "website\\build.py",
+            "line": 668,
+            "kind": "py-print",
+            "text": "print(f\"Output: {site_dir}\")"
+          },
+          {
+            "file": "website\\fetch_github_stars.py",
+            "line": 91,
+            "kind": "py-print",
+            "text": "print(f\"  Warning: {err.get('message', err)}\", file=sys.stderr)"
+          },
+          {
+            "file": "website\\fetch_github_stars.py",
+            "line": 100,
+            "kind": "py-print",
+            "text": "print(\"Error: GITHUB_TOKEN environment variable is required.\", file=sys.stderr)"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo (8 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [],
+        "py_files": 8,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+[
+  {
+    "repo": "agent-os",
+    "kind": "other",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "Agent_Memory_Final",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "api-contract-guardian",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "apiauth",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "awesome-python-fork",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools-revenueholdings.dev",
+    "kind": "content",
+    "actions": [
+      "skipped: content repo (no code to audit)"
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools.github.io",
+    "kind": "content",
+    "actions": [
+      "skipped: content repo (no code to audit)"
+    ]
+  },
+  {
+    "repo": "configdrift",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "context-mode",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "crossrepo-dep-manager",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "datamorph",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "deploydiff",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "devforge-cli",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "devforge-core",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "envault",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "hermes-agent-review",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "hermes-workspace",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "homebrew-tap",
+    "kind": "other",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "infra-scripts",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "json2sql",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "keybridge",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "Obsidian-Vault-Local",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "openclaw",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "profitmax-pro",
+    "kind": "python",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "pypi-index",
+    "kind": "content",
+    "actions": [
+      "skipped: content repo (no code to audit)"
+    ]
+  },
+  {
+    "repo": "revenue-dashboard",
+    "kind": "content",
+    "actions": [
+      "skipped: content repo (no code to audit)"
+    ]
+  },
+  {
+    "repo": "revenueholdings.dev",
+    "kind": "content",
+    "actions": [
+      "skipped: content repo (no code to audit)"
+    ]
+  },
+  {
+    "repo": "rtk-command-code",
+    "kind": "other",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "SaaS-Churn-Predictor",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "schemaforge",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "scoop-bucket",
+    "kind": "other",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "Snippet-Manager-Pro-main",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  },
+  {
+    "repo": "vscode-schemaforge",
+    "kind": "node",
+    "actions": [
+      "ok: release-audit.yml already present"
+    ]
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "repo": "agent-os",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "Agent_Memory_Final",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "api-contract-guardian",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "apiauth",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "awesome-python-fork",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools-revenueholdings.dev",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools.github.io",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "configdrift",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "context-mode",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "crossrepo-dep-manager",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "datamorph",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "deploydiff",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "devforge-cli",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "devforge-core",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "envault",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "hermes-agent-review",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "hermes-workspace",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "homebrew-tap",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "infra-scripts",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "json2sql",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "keybridge",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "Obsidian-Vault-Local",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "openclaw",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "profitmax-pro",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "pypi-index",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "revenue-dashboard",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "revenueholdings.dev",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "rtk-command-code",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "SaaS-Churn-Predictor",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "schemaforge",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "scoop-bucket",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "Snippet-Manager-Pro-main",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  },
+  {
+    "repo": "vscode-schemaforge",
+    "actions": [
+      "ok: SECURITY.md present"
+    ]
+  }
+]

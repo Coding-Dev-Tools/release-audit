@@ -1,0 +1,120 @@
+{
+  "repo": "schemaforge",
+  "path": "C:\\Users\\jomie\\workspace\\schemaforge",
+  "audited_at": "2026-06-16T07:41:10.763259+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "C",
+      "findings": [
+        {
+          "id": "DEP-NO-LOCKFILE",
+          "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+          "fix": "Commit a lockfile for reproducible builds"
+        }
+      ],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "5 debug print(s) - low noise"
+      ],
+      "raw": {
+        "debug_count": 5,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "scripts\\check_consistency.py",
+            "line": 16,
+            "kind": "py-print",
+            "text": "print(f\"Fixture not found: {sql_path}\")"
+          },
+          {
+            "file": "scripts\\check_consistency.py",
+            "line": 31,
+            "kind": "py-print",
+            "text": "print(f\"  OK: sql -> {fmt}\")"
+          },
+          {
+            "file": "scripts\\check_consistency.py",
+            "line": 33,
+            "kind": "py-print",
+            "text": "print(f\"  FAIL: sql -> {fmt}: {e}\")"
+          },
+          {
+            "file": "scripts\\check_consistency.py",
+            "line": 37,
+            "kind": "py-print",
+            "text": "print(f\"\\n{failures} conversion(s) failed\")"
+          },
+          {
+            "file": "scripts\\check_consistency.py",
+            "line": 40,
+            "kind": "py-print",
+            "text": "print(\"\\nAll format conversions successful\")"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo (50 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [],
+        "py_files": 50,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

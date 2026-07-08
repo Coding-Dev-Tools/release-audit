@@ -1,0 +1,104 @@
+{
+  "repo": "apiauth",
+  "path": "C:\\Users\\jomie\\workspace\\apiauth",
+  "audited_at": "2026-06-16T07:40:10.267098+00:00",
+  "overall_grade": "A",
+  "angles_passing": 8,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "tests\\test_cli.py",
+            "line": 411,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "Python repo with Makefile (lint target present)"
+      ],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "debug_count": 0,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "B",
+      "findings": [],
+      "notes": [
+        "Python repo (7 .py files) with no logging import"
+      ],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "src\\apiauth\\keygen.py",
+            "line": 215,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "src\\apiauth\\keystore.py",
+            "line": 56,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 7,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "repo": "SaaS-Churn-Predictor",
+  "path": "C:\\Users\\jomie\\workspace\\SaaS-Churn-Predictor",
+  "audited_at": "2026-06-16T07:41:10.474515+00:00",
+  "overall_grade": "A",
+  "angles_passing": 8,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "tests\\security-regression-contracts.test.ts",
+            "line": 48,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": []
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@ai-sdk/openai-compatible = '^2.0.47' (floating)",
+          "fix": "Pin @ai-sdk/openai-compatible to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@ai-sdk/react = '^3.0.186' (floating)",
+          "fix": "Pin @ai-sdk/react to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@radix-ui/react-slider = '^1.3.6' (floating)",
+          "fix": "Pin @radix-ui/react-slider to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@radix-ui/react-tabs = '^1.1.13' (floating)",
+          "fix": "Pin @radix-ui/react-tabs to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@reduxjs/toolkit = '^2.12.0' (floating)",
+          "fix": "Pin @reduxjs/toolkit to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@supabase/supabase-js = '^2.105.4' (floating)",
+          "fix": "Pin @supabase/supabase-js to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@tailwindcss/postcss = '^4.3.0' (floating)",
+          "fix": "Pin @tailwindcss/postcss to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@upstash/ratelimit = '^2.0.8' (floating)",
+          "fix": "Pin @upstash/ratelimit to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.@upstash/redis = '^1.38.0' (floating)",
+          "fix": "Pin @upstash/redis to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.ai = '^6.0.180' (floating)",
+          "fix": "Pin ai to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.clsx = '^2.1.1' (floating)",
+          "fix": "Pin clsx to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.date-fns = '^4.2.0' (floating)",
+          "fix": "Pin date-fns to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.framer-motion = '^12.40.0' (floating)",
+          "fix": "Pin framer-motion to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.lucide-react = '^1.16.0' (floating)",
+          "fix": "Pin lucide-react to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.next = '^15.5.18' (floating)",
+          "fix": "Pin next to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.react = '^19.2.6' (floating)",
+          "fix": "Pin react to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.react-dom = '^19.2.6' (floating)",
+          "fix": "Pin react-dom to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.recharts = '^3.8.1' (floating)",
+          "fix": "Pin recharts to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.resend = '^3.2.0' (floating)",
+          "fix": "Pin resend to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.sonner = '^2.0.7' (floating)",
+          "fix": "Pin sonner to an exact version for reproducible builds"
+        }
+      ],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEAD-DEBUG-NOISE",
+          "msg": "178 debug print/console.log statements",
+          "fix": "Remove debug prints; rely on a real logger"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "debug_count": 178,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "fix_blog_posts.py",
+            "line": 125,
+            "kind": "py-print",
+            "text": "print(f\"Written {len(new_content)} chars\")"
+          },
+          {
+            "file": "fix_blog_posts.py",
+            "line": 129,
+            "kind": "py-print",
+            "text": "print(f\"Total lines: {len(vlines)}\")"
+          },
+          {
+            "file": "fix_blog_posts.py",
+            "line": 145,
+            "kind": "py-print",
+            "text": "print(f\"Post '{keyword}': readingTime={'YES' if has_rt else 'MISSING'}\")"
+          },
+          {
+            "file": "fix_blog_posts.py",
+            "line": 148,
+            "kind": "py-print",
+            "text": "print(f\"Post '{keyword}': NOT FOUND\")"
+          },
+          {
+            "file": "fix_blog_posts.py",
+            "line": 150,
+            "kind": "py-print",
+            "text": "print(\"Last 10 lines:\")"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "ERR-BARE-EXCEPT",
+          "msg": "4 bare except/empty catch",
+          "fix": "Catch specific exceptions; log or re-raise"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "pai\\llm_router.py",
+            "line": 164,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "pai\\churn\\tuner.py",
+            "line": 223,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "scripts\\distribution\\engagement_engine.py",
+            "line": 112,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "scripts\\distribution\\reddit_headed.py",
+            "line": 64,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 47,
+        "has_logger_imports": true
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

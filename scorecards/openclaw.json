@@ -1,0 +1,227 @@
+{
+  "repo": "openclaw",
+  "path": "C:\\Users\\jomie\\workspace\\openclaw",
+  "audited_at": "2026-06-16T07:41:08.496430+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 1,
+  "angles": [
+    {
+      "grade": "D",
+      "findings": [
+        {
+          "id": "SEC-HARDCODED-SECRET",
+          "msg": "1 possible hardcoded secret(s) outside tests/blog/prose/example",
+          "fix": "Move to env vars / secret manager, rotate"
+        },
+        {
+          "id": "SEC-INJECTION-SINK",
+          "msg": "2 possible injection sink(s) outside tests/blog/build-scripts",
+          "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+            "line": 52,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+            "line": 58,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+            "line": 113,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+            "line": 118,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+            "line": 210,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+            "line": 224,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+            "line": 258,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+            "line": 284,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\gateway\\GatewaySessionInvokeTest.kt",
+            "line": 264,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\gateway\\GatewaySessionInvokeTest.kt",
+            "line": 311,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": [
+          {
+            "file": "extensions\\browser\\src\\browser\\pw-tools-core.interactions.ts",
+            "line": 1033,
+            "kind": "py-eval",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "extensions\\browser\\src\\browser\\pw-tools-core.interactions.ts",
+            "line": 1072,
+            "kind": "py-eval",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          }
+        ]
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "debug_count": 17,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "apps\\android\\scripts\\build-release-aab.ts",
+            "line": 131,
+            "kind": "node-console-log",
+            "text": "console.log(`Android versionName -> ${nextVersion.versionName}`);"
+          },
+          {
+            "file": "apps\\android\\scripts\\build-release-aab.ts",
+            "line": 132,
+            "kind": "node-console-log",
+            "text": "console.log(`Android versionCode -> ${nextVersion.versionCode}`);"
+          },
+          {
+            "file": "apps\\android\\scripts\\build-release-aab.ts",
+            "line": 154,
+            "kind": "node-console-log",
+            "text": "console.log(`Signed AAB (${variant.flavorName}): ${outputPath}`);"
+          },
+          {
+            "file": "apps\\android\\scripts\\build-release-aab.ts",
+            "line": 155,
+            "kind": "node-console-log",
+            "text": "console.log(`SHA-256 (${variant.flavorName}): ${hash}`);"
+          },
+          {
+            "file": "docs\\automation\\hooks.md",
+            "line": 101,
+            "kind": "node-console-log",
+            "text": "console.log(`[my-hook] New command triggered`);"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "swallowers": [],
+        "py_files": 0,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

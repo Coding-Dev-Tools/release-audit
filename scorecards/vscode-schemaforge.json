@@ -1,0 +1,146 @@
+{
+  "repo": "vscode-schemaforge",
+  "path": "C:\\Users\\jomie\\workspace\\vscode-schemaforge",
+  "audited_at": "2026-06-16T07:41:16.543136+00:00",
+  "overall_grade": "A",
+  "angles_passing": 7,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "C",
+      "findings": [
+        {
+          "id": "SEC-INJECTION-SINK",
+          "msg": "1 possible injection sink(s) outside tests/blog/build-scripts",
+          "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [],
+        "sinks": [
+          {
+            "file": "src\\cli.ts",
+            "line": 22,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": false
+          }
+        ]
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.@vscode/test-cli = '^0.0.4' (floating)",
+          "fix": "Pin @vscode/test-cli to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.@vscode/test-electron = '^2.3.8' (floating)",
+          "fix": "Pin @vscode/test-electron to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.typescript = '^5.3.0' (floating)",
+          "fix": "Pin typescript to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.eslint = '^8.50.0' (floating)",
+          "fix": "Pin eslint to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.@typescript-eslint/eslint-plugin = '^6.0.0' (floating)",
+          "fix": "Pin @typescript-eslint/eslint-plugin to an exact version for reproducible builds"
+        },
+        {
+          "id": "DEP-FLOATING",
+          "msg": "devDependencies.@typescript-eslint/parser = '^6.0.0' (floating)",
+          "fix": "Pin @typescript-eslint/parser to an exact version for reproducible builds"
+        }
+      ],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "3 debug print(s) - low noise"
+      ],
+      "raw": {
+        "debug_count": 3,
+        "todo_count": 0,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "src\\cli.ts",
+            "line": 19,
+            "kind": "node-console-log",
+            "text": "console.log(`SchemaForge exec: ${cmd}`);"
+          },
+          {
+            "file": "src\\extension.ts",
+            "line": 11,
+            "kind": "node-console-log",
+            "text": "console.log('SchemaForge extension activating...');"
+          },
+          {
+            "file": "src\\extension.ts",
+            "line": 68,
+            "kind": "node-console-log",
+            "text": "console.log('SchemaForge extension activated.');"
+          }
+        ],
+        "todo_samples": []
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "raw": {
+        "swallowers": [],
+        "py_files": 0,
+        "has_logger_imports": false
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

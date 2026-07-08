@@ -1,0 +1,366 @@
+{
+  "repo": "hermes-agent-review",
+  "path": "C:\\Users\\jomie\\workspace\\hermes-agent-review",
+  "audited_at": "2026-06-16T07:40:31.820744+00:00",
+  "overall_grade": "B",
+  "angles_passing": 6,
+  "angles_total": 8,
+  "blockers": 0,
+  "angles": [
+    {
+      "grade": "C",
+      "findings": [
+        {
+          "id": "SEC-INJECTION-SINK",
+          "msg": "3 possible injection sink(s) outside tests/blog/build-scripts",
+          "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "env_files": [],
+        "secrets": [
+          {
+            "file": "skills\\devops\\webhook-subscriptions\\SKILL.md",
+            "line": 39,
+            "kind": "literal-secret",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": true,
+            "in_example": false
+          },
+          {
+            "file": "skills\\mcp\\native-mcp\\SKILL.md",
+            "line": 279,
+            "kind": "github-pat",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": true,
+            "in_example": false
+          },
+          {
+            "file": "skills\\mcp\\native-mcp\\SKILL.md",
+            "line": 292,
+            "kind": "openai-style-key",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": true,
+            "in_example": false
+          },
+          {
+            "file": "skills\\mcp\\native-mcp\\SKILL.md",
+            "line": 314,
+            "kind": "github-pat",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": true,
+            "in_example": false
+          },
+          {
+            "file": "skills\\mcp\\native-mcp\\SKILL.md",
+            "line": 319,
+            "kind": "openai-style-key",
+            "in_test": false,
+            "in_blog": false,
+            "in_prose": true,
+            "in_example": false
+          },
+          {
+            "file": "tests\\agent\\test_azure_identity_adapter.py",
+            "line": 524,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\agent\\test_azure_identity_adapter.py",
+            "line": 579,
+            "kind": "literal-secret",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\agent\\test_bedrock_integration.py",
+            "line": 123,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\agent\\test_bedrock_integration.py",
+            "line": 138,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          },
+          {
+            "file": "tests\\agent\\test_bedrock_integration.py",
+            "line": 515,
+            "kind": "aws-access-key",
+            "in_test": true,
+            "in_blog": false,
+            "in_prose": false,
+            "in_example": false
+          }
+        ],
+        "sinks": [
+          {
+            "file": "scripts\\whatsapp-bridge\\bridge.js",
+            "line": 617,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "skills\\red-teaming\\godmode\\scripts\\auto_jailbreak.py",
+            "line": 9,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "skills\\red-teaming\\godmode\\scripts\\auto_jailbreak.py",
+            "line": 52,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "skills\\red-teaming\\godmode\\scripts\\auto_jailbreak.py",
+            "line": 54,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "skills\\red-teaming\\godmode\\scripts\\godmode_race.py",
+            "line": 10,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "skills\\red-teaming\\godmode\\scripts\\load_godmode.py",
+            "line": 5,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "skills\\red-teaming\\godmode\\scripts\\load_godmode.py",
+            "line": 29,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "skills\\red-teaming\\godmode\\scripts\\parseltongue.py",
+            "line": 14,
+            "kind": "py-exec",
+            "in_test": false,
+            "in_blog": false,
+            "in_build": true
+          },
+          {
+            "file": "tests\\test_live_system_guard_self_test.py",
+            "line": 136,
+            "kind": "py-os-system",
+            "in_test": true,
+            "in_blog": false,
+            "in_build": false
+          },
+          {
+            "file": "tests\\gateway\\test_ssl_certs.py",
+            "line": 43,
+            "kind": "py-exec",
+            "in_test": true,
+            "in_blog": false,
+            "in_build": false
+          }
+        ]
+      },
+      "angle": "security"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEP-FLOATING",
+          "msg": "dependencies.agent-browser = '^0.26.0' (floating)",
+          "fix": "Pin agent-browser to an exact version for reproducible builds"
+        }
+      ],
+      "notes": [],
+      "angle": "dependencies"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "pyproject.toml references pytest"
+      ],
+      "angle": "tests"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "lint-types"
+    },
+    {
+      "grade": "B",
+      "findings": [
+        {
+          "id": "DEAD-DEBUG-NOISE",
+          "msg": "5775 debug print/console.log statements",
+          "fix": "Remove debug prints; rely on a real logger"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "debug_count": 5775,
+        "todo_count": 1,
+        "bak": [],
+        "tmp": [],
+        "debug_samples": [
+          {
+            "file": "AGENTS.md",
+            "line": 918,
+            "kind": "py-print",
+            "text": "print(f\"Config saved to {display_hermes_home()}/config.yaml\")"
+          },
+          {
+            "file": "AGENTS.md",
+            "line": 921,
+            "kind": "py-print",
+            "text": "print(\"Config saved to ~/.hermes/config.yaml\")"
+          },
+          {
+            "file": "batch_runner.py",
+            "line": 282,
+            "kind": "py-print",
+            "text": "print(f\"   Prompt {prompt_index}: Pulling docker image {container_image}...\", flush=True)"
+          },
+          {
+            "file": "batch_runner.py",
+            "line": 301,
+            "kind": "py-print",
+            "text": "print(f\"   Prompt {prompt_index}: Docker image check failed: {img_err}\", flush=True)"
+          },
+          {
+            "file": "batch_runner.py",
+            "line": 314,
+            "kind": "py-print",
+            "text": "print(f\"   Prompt {prompt_index}: Using container image {container_image}\")"
+          }
+        ],
+        "todo_samples": [
+          {
+            "file": "optional-skills\\mlops\\training\\axolotl\\references\\api.md",
+            "line": 1610,
+            "kind": "todo",
+            "text": "TODO: Remove when upstream added PR to release"
+          }
+        ]
+      },
+      "angle": "dead-code"
+    },
+    {
+      "grade": "C",
+      "findings": [
+        {
+          "id": "ERR-BARE-EXCEPT",
+          "msg": "1583 bare except/empty catch",
+          "fix": "Catch specific exceptions; log or re-raise"
+        }
+      ],
+      "notes": [],
+      "raw": {
+        "swallowers": [
+          {
+            "file": "cli.py",
+            "line": 79,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 629,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 636,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 643,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 651,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 704,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 711,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 755,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 759,
+            "kind": "py-bare-exception"
+          },
+          {
+            "file": "cli.py",
+            "line": 764,
+            "kind": "py-bare-exception"
+          }
+        ],
+        "py_files": 1794,
+        "has_logger_imports": true
+      },
+      "angle": "errors-logging"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [
+        "No CHANGELOG file (acceptable for early-stage projects)"
+      ],
+      "angle": "docs"
+    },
+    {
+      "grade": "A",
+      "findings": [],
+      "notes": [],
+      "angle": "release"
+    }
+  ]
+}

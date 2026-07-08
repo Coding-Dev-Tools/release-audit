@@ -1,0 +1,980 @@
+[
+  {
+    "repo": "agent-os",
+    "kind": "other",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (10974 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "Agent_Memory_Final",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (11775 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "api-contract-guardian",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (5906 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 0.1.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "apiauth",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (7326 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "awesome-python-fork",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (78722 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools-revenueholdings.dev",
+    "kind": "other",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (3300 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "Coding-Dev-Tools.github.io",
+    "kind": "content",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (517 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "configdrift",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (5260 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 0.1.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "context-mode",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (80803 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 1.0.151"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "crossrepo-dep-manager",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (1939 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "datamorph",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (7185 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 0.1.1"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "deploydiff",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (5912 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 0.1.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "devforge-cli",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (4700 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "devforge-core",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (2581 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "envault",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (11876 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 0.1.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "hermes-agent-review",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (12908 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 1.0.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "hermes-workspace",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (31809 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 2.3.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "homebrew-tap",
+    "kind": "content",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (489 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "infra-scripts",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (13615 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "json2sql",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (4922 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 0.1.1"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "keybridge",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (5162 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 3.0.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "Obsidian-Vault-Local",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (2584 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "openclaw",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (86171 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 2026.5.19"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "profitmax-pro",
+    "kind": "python",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (1775 bytes)"
+      ],
+      [
+        "pyproject",
+        "ok: pyproject.toml present"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: ruff already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "pypi-index",
+    "kind": "content",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (2178 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "revenue-dashboard",
+    "kind": "other",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (557 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "revenueholdings.dev",
+    "kind": "other",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (3300 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "rtk-command-code",
+    "kind": "other",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (3677 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "SaaS-Churn-Predictor",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (12668 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 1.0.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "schemaforge",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (20173 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 1.7.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "scoop-bucket",
+    "kind": "content",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (489 bytes)"
+      ]
+    ]
+  },
+  {
+    "repo": "Snippet-Manager-Pro-main",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "patched .gitignore (added: __pycache__)"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (11769 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 1.0.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  },
+  {
+    "repo": "vscode-schemaforge",
+    "kind": "node",
+    "actions": [
+      [
+        "gitignore",
+        "ok: .gitignore present and covers basics"
+      ],
+      [
+        "license",
+        "ok: LICENSE present"
+      ],
+      [
+        "readme",
+        "ok: README present (5583 bytes)"
+      ],
+      [
+        "node-version",
+        "ok: package.json has version 1.7.0"
+      ],
+      [
+        "ci",
+        "ok: CI workflow present"
+      ],
+      [
+        "lint",
+        "ok: eslint already configured"
+      ],
+      [
+        "tests",
+        "ok: tests/ has test files"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,5085 @@
+{
+  "repos": [
+    {
+      "repo": "agent-os",
+      "path": "C:\\Users\\jomie\\workspace\\agent-os",
+      "audited_at": "2026-06-16T07:40:07.989259+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "TEST-NO-TESTS",
+              "msg": "No tests directory and no real test script",
+              "fix": "Add a tests/ folder and a test runner"
+            }
+          ],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "Agent_Memory_Final",
+      "path": "C:\\Users\\jomie\\workspace\\Agent_Memory_Final",
+      "audited_at": "2026-06-16T07:40:09.873235+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "tests\\unit\\test_account_factory.py",
+                "line": 162,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "491 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 491,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "test_memory_scale.py",
+                "line": 19,
+                "kind": "py-print",
+                "text": "print(\"Starting agent memory scale test...\")"
+              },
+              {
+                "file": "test_memory_scale.py",
+                "line": 24,
+                "kind": "py-print",
+                "text": "print(\"ERROR: ORCHESTRATOR_DSN environment variable not set\")"
+              },
+              {
+                "file": "test_memory_scale.py",
+                "line": 27,
+                "kind": "py-print",
+                "text": "print(f\"Using DSN: {dsn}\")"
+              },
+              {
+                "file": "test_memory_scale.py",
+                "line": 34,
+                "kind": "py-print",
+                "text": "print(\"\u2713 Successfully initialized OrchestratorStore and memory components\")"
+              },
+              {
+                "file": "test_memory_scale.py",
+                "line": 36,
+                "kind": "py-print",
+                "text": "print(f\"\u2717 Failed to initialize memory components: {e}\")"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "ERR-BARE-EXCEPT",
+              "msg": "9 bare except/empty catch",
+              "fix": "Catch specific exceptions; log or re-raise"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "api-contract-monitor\\backend\\app\\openapi_parser.py",
+                "line": 35,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "apps\\workers\\distribute\\worker.py",
+                "line": 204,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "apps\\workers\\monetize\\worker.py",
+                "line": 208,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "pai\\llm_router.py",
+                "line": 166,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "scripts\\seed_all_now.py",
+                "line": 146,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "scripts\\distribution\\engagement_engine.py",
+                "line": 116,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "src\\intelligent_knowledge_graph.py",
+                "line": 505,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "src\\intelligent_knowledge_graph.py",
+                "line": 536,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "src\\paperclip_learning.py",
+                "line": 397,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 279,
+            "has_logger_imports": true
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "api-contract-guardian",
+      "path": "C:\\Users\\jomie\\workspace\\api-contract-guardian",
+      "audited_at": "2026-06-16T07:40:10.078448+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (13 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "src\\api_contract_guardian\\cli.py",
+                "line": 14,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 13,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "apiauth",
+      "path": "C:\\Users\\jomie\\workspace\\apiauth",
+      "audited_at": "2026-06-16T07:40:10.267098+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "tests\\test_cli.py",
+                "line": 411,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (7 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "src\\apiauth\\keygen.py",
+                "line": 215,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "src\\apiauth\\keystore.py",
+                "line": 56,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 7,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "awesome-python-fork",
+      "path": "C:\\Users\\jomie\\workspace\\awesome-python-fork",
+      "audited_at": "2026-06-16T07:40:10.504190+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 15,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "website\\build.py",
+                "line": 666,
+                "kind": "py-print",
+                "text": "print(f\"Built site with {len(parsed_groups)} groups, {len(categories)} categories\")"
+              },
+              {
+                "file": "website\\build.py",
+                "line": 667,
+                "kind": "py-print",
+                "text": "print(f\"Total entries: {total_entries}\")"
+              },
+              {
+                "file": "website\\build.py",
+                "line": 668,
+                "kind": "py-print",
+                "text": "print(f\"Output: {site_dir}\")"
+              },
+              {
+                "file": "website\\fetch_github_stars.py",
+                "line": 91,
+                "kind": "py-print",
+                "text": "print(f\"  Warning: {err.get('message', err)}\", file=sys.stderr)"
+              },
+              {
+                "file": "website\\fetch_github_stars.py",
+                "line": 100,
+                "kind": "py-print",
+                "text": "print(\"Error: GITHUB_TOKEN environment variable is required.\", file=sys.stderr)"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo (8 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [],
+            "py_files": 8,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "Coding-Dev-Tools-revenueholdings.dev",
+      "path": "C:\\Users\\jomie\\workspace\\Coding-Dev-Tools-revenueholdings.dev",
+      "audited_at": "2026-06-16T07:40:10.894119+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "blog\\preview-infra-cost-before-deploy.html",
+                "line": 142,
+                "kind": "literal-secret",
+                "in_test": false,
+                "in_blog": true,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "TEST-NO-TESTS",
+              "msg": "No tests directory and no real test script",
+              "fix": "Add a tests/ folder and a test runner"
+            }
+          ],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "4 debug print(s) - low noise"
+          ],
+          "raw": {
+            "debug_count": 4,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "blog\\click-to-mcp-usage-guide.html",
+                "line": 355,
+                "kind": "py-print",
+                "text": "print(json.dumps(tools, indent=2))"
+              },
+              {
+                "file": "blog\\click-to-mcp-usage-guide.html",
+                "line": 372,
+                "kind": "py-print",
+                "text": "print(result)</code></pre>"
+              },
+              {
+                "file": "blog\\click-vs-typer-vs-argparse-python-cli.html",
+                "line": 132,
+                "kind": "py-print",
+                "text": "print(f\"Processing {args.input} -> {args.output}\")</code></pre>"
+              },
+              {
+                "file": "blog\\five-productivity-workflows-cli-suite.html",
+                "line": 141,
+                "kind": "py-print",
+                "text": "print(json.dumps(data))"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "Coding-Dev-Tools.github.io",
+      "path": "C:\\Users\\jomie\\workspace\\Coding-Dev-Tools.github.io",
+      "audited_at": "2026-06-16T07:40:11.035930+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "TEST-NO-TESTS",
+              "msg": "No tests directory and no real test script",
+              "fix": "Add a tests/ folder and a test runner"
+            }
+          ],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "configdrift",
+      "path": "C:\\Users\\jomie\\workspace\\configdrift",
+      "audited_at": "2026-06-16T07:40:11.225403+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (7 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "src\\configdrift\\loader.py",
+                "line": 26,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "src\\configdrift\\loader.py",
+                "line": 31,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 7,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "context-mode",
+      "path": "C:\\Users\\jomie\\workspace\\context-mode",
+      "audited_at": "2026-06-16T07:40:13.254189+00:00",
+      "overall_grade": "B",
+      "angles_passing": 6,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "SEC-INJECTION-SINK",
+              "msg": "9 possible injection sink(s) outside tests/blog/build-scripts",
+              "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "tests\\executor.test.ts",
+                "line": 1434,
+                "kind": "slack-token",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\executor.test.ts",
+                "line": 1442,
+                "kind": "slack-token",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\core\\fetch-cleanup.test.ts",
+                "line": 104,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\fixtures\\github-issues.json",
+                "line": 1,
+                "kind": "jwt",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\session\\session-extract.test.ts",
+                "line": 1836,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": [
+              {
+                "file": "hooks\\ensure-deps.mjs",
+                "line": 75,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "hooks\\ensure-deps.mjs",
+                "line": 104,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "hooks\\ensure-deps.mjs",
+                "line": 193,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "hooks\\ensure-deps.mjs",
+                "line": 212,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "hooks\\ensure-deps.mjs",
+                "line": 242,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\heal-better-sqlite3.mjs",
+                "line": 197,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\heal-better-sqlite3.mjs",
+                "line": 400,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\postinstall.mjs",
+                "line": 295,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "src\\cli.ts",
+                "line": 239,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "src\\db-base.ts",
+                "line": 64,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              }
+            ]
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@clack/prompts = '^1.0.1' (floating)",
+              "fix": "Pin @clack/prompts to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@mixmark-io/domino = '^2.2.0' (floating)",
+              "fix": "Pin @mixmark-io/domino to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@modelcontextprotocol/sdk = '^1.26.0' (floating)",
+              "fix": "Pin @modelcontextprotocol/sdk to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.better-sqlite3 = '^12.6.2' (floating)",
+              "fix": "Pin better-sqlite3 to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.picocolors = '^1.1.1' (floating)",
+              "fix": "Pin picocolors to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.turndown = '^7.2.0' (floating)",
+              "fix": "Pin turndown to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.turndown-plugin-gfm = '^1.0.2' (floating)",
+              "fix": "Pin turndown-plugin-gfm to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.zod = '^3.25.0' (floating)",
+              "fix": "Pin zod to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.esbuild = '^0.27.3' (floating)",
+              "fix": "Pin esbuild to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.tsx = '^4.21.0' (floating)",
+              "fix": "Pin tsx to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.typescript = '^5.7.0' (floating)",
+              "fix": "Pin typescript to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.vitest = '^4.0.18' (floating)",
+              "fix": "Pin vitest to an exact version for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "637 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 637,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "cli.bundle.mjs",
+                "line": 729,
+                "kind": "node-console-log",
+                "text": "console.log('__CM_CT__:' + ct);"
+              },
+              {
+                "file": "cli.bundle.mjs",
+                "line": 833,
+                "kind": "node-console-log",
+                "text": "console.log(f + ': ' + lines + ' lines');"
+              },
+              {
+                "file": "server.bundle.mjs",
+                "line": 594,
+                "kind": "node-console-log",
+                "text": "console.log(f + ': ' + lines + ' lines');"
+              },
+              {
+                "file": "server.bundle.mjs",
+                "line": 892,
+                "kind": "node-console-log",
+                "text": "console.log('__CM_CT__:' + ct);"
+              },
+              {
+                "file": "hooks\\precompact.mjs",
+                "line": 92,
+                "kind": "node-console-log",
+                "text": "console.log(JSON.stringify({}));"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "crossrepo-dep-manager",
+      "path": "C:\\Users\\jomie\\workspace\\crossrepo-dep-manager",
+      "audited_at": "2026-06-16T07:40:13.450732+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (5 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "src\\crossrepo_dep_manager\\scanner.py",
+                "line": 56,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 5,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "datamorph",
+      "path": "C:\\Users\\jomie\\workspace\\datamorph",
+      "audited_at": "2026-06-16T07:40:13.644073+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo (6 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [],
+            "py_files": 6,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "deploydiff",
+      "path": "C:\\Users\\jomie\\workspace\\deploydiff",
+      "audited_at": "2026-06-16T07:40:13.825599+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo (14 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [],
+            "py_files": 14,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "devforge-cli",
+      "path": "C:\\Users\\jomie\\workspace\\devforge-cli",
+      "audited_at": "2026-06-16T07:40:13.979443+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (3 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "src\\devforge\\cli.py",
+                "line": 144,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 3,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "devforge-core",
+      "path": "C:\\Users\\jomie\\workspace\\devforge-core",
+      "audited_at": "2026-06-16T07:40:14.126204+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "2 debug print(s) - low noise"
+          ],
+          "raw": {
+            "debug_count": 2,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "src\\revenueholdings_core\\license.py",
+                "line": 131,
+                "kind": "py-print",
+                "text": "print(f\"Rate limit: {result.max_requests_per_hour}/hour\")"
+              },
+              {
+                "file": "src\\revenueholdings_core\\rate_limiter.py",
+                "line": 32,
+                "kind": "py-print",
+                "text": "print(\"Rate limit exceeded\")"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (8 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "src\\revenueholdings_core\\rate_limiter.py",
+                "line": 123,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 8,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "envault",
+      "path": "C:\\Users\\jomie\\workspace\\envault",
+      "audited_at": "2026-06-16T07:40:14.444813+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "tests\\test_cli.py",
+                "line": 1044,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_cli.py",
+                "line": 1055,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_cli.py",
+                "line": 1084,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_encrypt_formats.py",
+                "line": 10,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_encrypt_formats.py",
+                "line": 15,
+                "kind": "private-key-block",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_encrypt_formats.py",
+                "line": 25,
+                "kind": "private-key-block",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_envault.py",
+                "line": 673,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_security_audit.py",
+                "line": 102,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_security_audit.py",
+                "line": 108,
+                "kind": "private-key-block",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_security_audit.py",
+                "line": 169,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "33 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 33,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "_qa_repro_test.py",
+                "line": 15,
+                "kind": "py-print",
+                "text": "print(f\"exit_code: {result.exit_code}\")"
+              },
+              {
+                "file": "_qa_repro_test.py",
+                "line": 16,
+                "kind": "py-print",
+                "text": "print(f\"output: {result.output}\")"
+              },
+              {
+                "file": "_qa_repro_test.py",
+                "line": 17,
+                "kind": "py-print",
+                "text": "print(f\"hardcoded_credential in output: {'hardcoded_credential' in result.output}\")"
+              },
+              {
+                "file": "_qa_repro_test.py",
+                "line": 29,
+                "kind": "py-print",
+                "text": "print(f\"exit_code: {result.exit_code}\")"
+              },
+              {
+                "file": "_qa_repro_test.py",
+                "line": 30,
+                "kind": "py-print",
+                "text": "print(f\"output: {result.output}\")"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "ERR-BARE-EXCEPT",
+              "msg": "4 bare except/empty catch",
+              "fix": "Catch specific exceptions; log or re-raise"
+            }
+          ],
+          "notes": [
+            "Python repo (28 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "src\\envault\\encrypt.py",
+                "line": 173,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "src\\envault\\stores\\__init__.py",
+                "line": 206,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "src\\envault\\stores\\__init__.py",
+                "line": 226,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "src\\envault\\stores\\__init__.py",
+                "line": 238,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 28,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "hermes-agent-review",
+      "path": "C:\\Users\\jomie\\workspace\\hermes-agent-review",
+      "audited_at": "2026-06-16T07:40:31.820744+00:00",
+      "overall_grade": "B",
+      "angles_passing": 6,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "SEC-INJECTION-SINK",
+              "msg": "3 possible injection sink(s) outside tests/blog/build-scripts",
+              "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "skills\\devops\\webhook-subscriptions\\SKILL.md",
+                "line": 39,
+                "kind": "literal-secret",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": true,
+                "in_example": false
+              },
+              {
+                "file": "skills\\mcp\\native-mcp\\SKILL.md",
+                "line": 279,
+                "kind": "github-pat",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": true,
+                "in_example": false
+              },
+              {
+                "file": "skills\\mcp\\native-mcp\\SKILL.md",
+                "line": 292,
+                "kind": "openai-style-key",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": true,
+                "in_example": false
+              },
+              {
+                "file": "skills\\mcp\\native-mcp\\SKILL.md",
+                "line": 314,
+                "kind": "github-pat",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": true,
+                "in_example": false
+              },
+              {
+                "file": "skills\\mcp\\native-mcp\\SKILL.md",
+                "line": 319,
+                "kind": "openai-style-key",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": true,
+                "in_example": false
+              },
+              {
+                "file": "tests\\agent\\test_azure_identity_adapter.py",
+                "line": 524,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\agent\\test_azure_identity_adapter.py",
+                "line": 579,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\agent\\test_bedrock_integration.py",
+                "line": 123,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\agent\\test_bedrock_integration.py",
+                "line": 138,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\agent\\test_bedrock_integration.py",
+                "line": 515,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": [
+              {
+                "file": "scripts\\whatsapp-bridge\\bridge.js",
+                "line": 617,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "skills\\red-teaming\\godmode\\scripts\\auto_jailbreak.py",
+                "line": 9,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "skills\\red-teaming\\godmode\\scripts\\auto_jailbreak.py",
+                "line": 52,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "skills\\red-teaming\\godmode\\scripts\\auto_jailbreak.py",
+                "line": 54,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "skills\\red-teaming\\godmode\\scripts\\godmode_race.py",
+                "line": 10,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "skills\\red-teaming\\godmode\\scripts\\load_godmode.py",
+                "line": 5,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "skills\\red-teaming\\godmode\\scripts\\load_godmode.py",
+                "line": 29,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "skills\\red-teaming\\godmode\\scripts\\parseltongue.py",
+                "line": 14,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "tests\\test_live_system_guard_self_test.py",
+                "line": 136,
+                "kind": "py-os-system",
+                "in_test": true,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "tests\\gateway\\test_ssl_certs.py",
+                "line": 43,
+                "kind": "py-exec",
+                "in_test": true,
+                "in_blog": false,
+                "in_build": false
+              }
+            ]
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.agent-browser = '^0.26.0' (floating)",
+              "fix": "Pin agent-browser to an exact version for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "5775 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 5775,
+            "todo_count": 1,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "AGENTS.md",
+                "line": 918,
+                "kind": "py-print",
+                "text": "print(f\"Config saved to {display_hermes_home()}/config.yaml\")"
+              },
+              {
+                "file": "AGENTS.md",
+                "line": 921,
+                "kind": "py-print",
+                "text": "print(\"Config saved to ~/.hermes/config.yaml\")"
+              },
+              {
+                "file": "batch_runner.py",
+                "line": 282,
+                "kind": "py-print",
+                "text": "print(f\"   Prompt {prompt_index}: Pulling docker image {container_image}...\", flush=True)"
+              },
+              {
+                "file": "batch_runner.py",
+                "line": 301,
+                "kind": "py-print",
+                "text": "print(f\"   Prompt {prompt_index}: Docker image check failed: {img_err}\", flush=True)"
+              },
+              {
+                "file": "batch_runner.py",
+                "line": 314,
+                "kind": "py-print",
+                "text": "print(f\"   Prompt {prompt_index}: Using container image {container_image}\")"
+              }
+            ],
+            "todo_samples": [
+              {
+                "file": "optional-skills\\mlops\\training\\axolotl\\references\\api.md",
+                "line": 1610,
+                "kind": "todo",
+                "text": "TODO: Remove when upstream added PR to release"
+              }
+            ]
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "ERR-BARE-EXCEPT",
+              "msg": "1583 bare except/empty catch",
+              "fix": "Catch specific exceptions; log or re-raise"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "cli.py",
+                "line": 79,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 629,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 636,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 643,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 651,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 704,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 711,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 755,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 759,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "cli.py",
+                "line": 764,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 1794,
+            "has_logger_imports": true
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "hermes-workspace",
+      "path": "C:\\Users\\jomie\\workspace\\hermes-workspace",
+      "audited_at": "2026-06-16T07:40:56.535088+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "SEC-HARDCODED-SECRET",
+              "msg": "5 possible hardcoded secret(s) outside tests/blog/prose/example",
+              "fix": "Move to env vars / secret manager, rotate"
+            },
+            {
+              "id": "SEC-INJECTION-SINK",
+              "msg": "5 possible injection sink(s) outside tests/blog/build-scripts",
+              "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "src\\lib\\provider-catalog.ts",
+                "line": 27,
+                "kind": "literal-secret",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "src\\lib\\provider-catalog.ts",
+                "line": 48,
+                "kind": "literal-secret",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "src\\lib\\provider-catalog.ts",
+                "line": 69,
+                "kind": "literal-secret",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "src\\lib\\provider-catalog.ts",
+                "line": 90,
+                "kind": "literal-secret",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "src\\lib\\provider-catalog.ts",
+                "line": 111,
+                "kind": "literal-secret",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "src\\routes\\api\\-mcp.test.ts",
+                "line": 124,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "src\\server\\mcp-normalize.test.ts",
+                "line": 205,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "src\\server\\mcp-normalize.test.ts",
+                "line": 264,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": [
+              {
+                "file": "vite.config.ts",
+                "line": 677,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "src\\server\\provider-usage.ts",
+                "line": 122,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "src\\server\\provider-usage.ts",
+                "line": 156,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "src\\server\\swarm-chat-reader.ts",
+                "line": 74,
+                "kind": "sql-string-concat",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "src\\server\\update-system.ts",
+                "line": 410,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "src\\server\\mcp-hub\\-trust.test.ts",
+                "line": 251,
+                "kind": "py-os-system",
+                "in_test": true,
+                "in_blog": false,
+                "in_build": false
+              }
+            ]
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@base-ui/react = '^1.1.0' (floating)",
+              "fix": "Pin @base-ui/react to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@hugeicons/core-free-icons = '^3.1.1' (floating)",
+              "fix": "Pin @hugeicons/core-free-icons to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@hugeicons/react = '^1.1.4' (floating)",
+              "fix": "Pin @hugeicons/react to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@lobehub/icons = '^5.0.1' (floating)",
+              "fix": "Pin @lobehub/icons to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@lobehub/icons-static-png = '^1.83.0' (floating)",
+              "fix": "Pin @lobehub/icons-static-png to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@monaco-editor/react = '^4.7.0' (floating)",
+              "fix": "Pin @monaco-editor/react to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@react-three/drei = '^10.7.7' (floating)",
+              "fix": "Pin @react-three/drei to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@react-three/fiber = '^9.6.1' (floating)",
+              "fix": "Pin @react-three/fiber to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@react-three/postprocessing = '^3.0.4' (floating)",
+              "fix": "Pin @react-three/postprocessing to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@react-three/rapier = '^2.2.0' (floating)",
+              "fix": "Pin @react-three/rapier to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@tailwindcss/vite = '^4.1.18' (floating)",
+              "fix": "Pin @tailwindcss/vite to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.class-variance-authority = '^0.7.1' (floating)",
+              "fix": "Pin class-variance-authority to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.clsx = '^2.1.1' (floating)",
+              "fix": "Pin clsx to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.ecctrl = '^1.0.97' (floating)",
+              "fix": "Pin ecctrl to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.electron-updater = '^6.6.2' (floating)",
+              "fix": "Pin electron-updater to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.framer-motion = '^12.36.0' (floating)",
+              "fix": "Pin framer-motion to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.marked = '^17.0.1' (floating)",
+              "fix": "Pin marked to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.motion = '^12.29.2' (floating)",
+              "fix": "Pin motion to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.motion-dom = '^12.36.0' (floating)",
+              "fix": "Pin motion-dom to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.motion-utils = '^12.36.0' (floating)",
+              "fix": "Pin motion-utils to an exact version for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "41 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 41,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "server-entry.js",
+                "line": 239,
+                "kind": "node-console-log",
+                "text": "console.log(`Hermes Workspace running at http://${bindHost}:${port}`)"
+              },
+              {
+                "file": "vite.config.ts",
+                "line": 110,
+                "kind": "node-console-log",
+                "text": "console.log("
+              },
+              {
+                "file": "vite.config.ts",
+                "line": 117,
+                "kind": "node-console-log",
+                "text": "console.log('[hermes-agent] Already running \u2014 reusing existing process')"
+              },
+              {
+                "file": "vite.config.ts",
+                "line": 136,
+                "kind": "node-console-log",
+                "text": "console.log(`[hermes-agent] Starting ${claudeBin} gateway run`)"
+              },
+              {
+                "file": "vite.config.ts",
+                "line": 152,
+                "kind": "node-console-log",
+                "text": "console.log("
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (3 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "src\\server\\pty-helper.py",
+                "line": 78,
+                "kind": "py-bare-except"
+              },
+              {
+                "file": "src\\server\\pty-helper.py",
+                "line": 111,
+                "kind": "py-bare-except"
+              }
+            ],
+            "py_files": 3,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "homebrew-tap",
+      "path": "C:\\Users\\jomie\\workspace\\homebrew-tap",
+      "audited_at": "2026-06-16T07:40:56.667031+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "TEST-NO-TESTS",
+              "msg": "No tests directory and no real test script",
+              "fix": "Add a tests/ folder and a test runner"
+            }
+          ],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "infra-scripts",
+      "path": "C:\\Users\\jomie\\workspace\\infra-scripts",
+      "audited_at": "2026-06-16T07:40:56.875354+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "201 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 201,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "check_all.py",
+                "line": 8,
+                "kind": "py-print",
+                "text": "print(f\"{i['identifier']:>8} UNASSIGNED   {i['priority']:>7} {i['title'][:55]}\")"
+              },
+              {
+                "file": "check_all.py",
+                "line": 11,
+                "kind": "py-print",
+                "text": "print(f\"{i['identifier']:>8} {s:>12} {i['priority']:>7} {i['title'][:55]}\")"
+              },
+              {
+                "file": "check_content.py",
+                "line": 4,
+                "kind": "py-print",
+                "text": "print(\"=== click-to-mcp ===\")"
+              },
+              {
+                "file": "check_content.py",
+                "line": 5,
+                "kind": "py-print",
+                "text": "print(\"index.html:\", \"Auto-wrap any Click or Typer CLI as an MCP server - one command. Your CLI is now a first-class AI "
+              },
+              {
+                "file": "check_content.py",
+                "line": 6,
+                "kind": "py-print",
+                "text": "print(\"docs.html:\", \"\")"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (18 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "openclaw-migration.py",
+                "line": 61,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "openclaw-migration.py",
+                "line": 69,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 18,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "json2sql",
+      "path": "C:\\Users\\jomie\\workspace\\json2sql",
+      "audited_at": "2026-06-16T07:40:57.055922+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo (7 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [],
+            "py_files": 7,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "keybridge",
+      "path": "C:\\Users\\jomie\\workspace\\keybridge",
+      "audited_at": "2026-06-16T07:40:57.229533+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "4 debug print(s) - low noise"
+          ],
+          "raw": {
+            "debug_count": 4,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "proxy.js",
+                "line": 2638,
+                "kind": "node-console-log",
+                "text": "console.log(`Command Code Proxy on http://${displayHost}:${getPort()}`);"
+              },
+              {
+                "file": "proxy.js",
+                "line": 2639,
+                "kind": "node-console-log",
+                "text": "console.log(`Binding to: ${DEFAULT_BIND_HOST}:${getPort()}`);"
+              },
+              {
+                "file": "proxy.js",
+                "line": 2640,
+                "kind": "node-console-log",
+                "text": "console.log(`Vault config: ${CONFIG_DIR}`);"
+              },
+              {
+                "file": "test-proxy.js",
+                "line": 130,
+                "kind": "node-console-log",
+                "text": "console.log('Smoke test passed.');"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "Obsidian-Vault-Local",
+      "path": "C:\\Users\\jomie\\workspace\\Obsidian-Vault-Local",
+      "audited_at": "2026-06-16T07:40:57.858553+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "tests\\test_credential_leak_scanner.py",
+                "line": 41,
+                "kind": "github-pat",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_credential_leak_scanner.py",
+                "line": 70,
+                "kind": "openai-style-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_credential_leak_scanner.py",
+                "line": 86,
+                "kind": "aws-access-key",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_credential_leak_scanner.py",
+                "line": 99,
+                "kind": "private-key-block",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_credential_leak_scanner.py",
+                "line": 103,
+                "kind": "private-key-block",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_credential_leak_scanner.py",
+                "line": 107,
+                "kind": "private-key-block",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "tests\\test_credential_leak_scanner.py",
+                "line": 202,
+                "kind": "github-pat",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "171 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 171,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+                "line": 593,
+                "kind": "py-print",
+                "text": "print(\"=\" * 70)"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+                "line": 594,
+                "kind": "py-print",
+                "text": "print(\"AGENT VAULT DEDUPLICATION REPORT\")"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+                "line": 595,
+                "kind": "py-print",
+                "text": "print(f\"Generated: {report['timestamp']}\")"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+                "line": 596,
+                "kind": "py-print",
+                "text": "print(f\"Vault: {report['vault']}\")"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+                "line": 597,
+                "kind": "py-print",
+                "text": "print(\"=\" * 70)"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "ERR-BARE-EXCEPT",
+              "msg": "23 bare except/empty catch",
+              "fix": "Catch specific exceptions; log or re-raise"
+            }
+          ],
+          "notes": [
+            "Python repo (16 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+                "line": 63,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+                "line": 71,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\agent_vault_dedup.py",
+                "line": 411,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\vault_dedup.py",
+                "line": 66,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\vault_dedup.py",
+                "line": 75,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\vault_search.py",
+                "line": 103,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\vault_search.py",
+                "line": 234,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "03-Infrastructure\\scripts\\vault_search.py",
+                "line": 247,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "04-Agents\\vault_health.py",
+                "line": 179,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "04-Agents\\vault_sync.py",
+                "line": 118,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 16,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "openclaw",
+      "path": "C:\\Users\\jomie\\workspace\\openclaw",
+      "audited_at": "2026-06-16T07:41:08.496430+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "SEC-HARDCODED-SECRET",
+              "msg": "1 possible hardcoded secret(s) outside tests/blog/prose/example",
+              "fix": "Move to env vars / secret manager, rotate"
+            },
+            {
+              "id": "SEC-INJECTION-SINK",
+              "msg": "2 possible injection sink(s) outside tests/blog/build-scripts",
+              "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+                "line": 52,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+                "line": 58,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+                "line": 113,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+                "line": 118,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+                "line": 210,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+                "line": 224,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+                "line": 258,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\GatewayBootstrapAuthTest.kt",
+                "line": 284,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\gateway\\GatewaySessionInvokeTest.kt",
+                "line": 264,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "apps\\android\\app\\src\\test\\java\\ai\\openclaw\\app\\gateway\\GatewaySessionInvokeTest.kt",
+                "line": 311,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": [
+              {
+                "file": "extensions\\browser\\src\\browser\\pw-tools-core.interactions.ts",
+                "line": 1033,
+                "kind": "py-eval",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "extensions\\browser\\src\\browser\\pw-tools-core.interactions.ts",
+                "line": 1072,
+                "kind": "py-eval",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              }
+            ]
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 17,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "apps\\android\\scripts\\build-release-aab.ts",
+                "line": 131,
+                "kind": "node-console-log",
+                "text": "console.log(`Android versionName -> ${nextVersion.versionName}`);"
+              },
+              {
+                "file": "apps\\android\\scripts\\build-release-aab.ts",
+                "line": 132,
+                "kind": "node-console-log",
+                "text": "console.log(`Android versionCode -> ${nextVersion.versionCode}`);"
+              },
+              {
+                "file": "apps\\android\\scripts\\build-release-aab.ts",
+                "line": 154,
+                "kind": "node-console-log",
+                "text": "console.log(`Signed AAB (${variant.flavorName}): ${outputPath}`);"
+              },
+              {
+                "file": "apps\\android\\scripts\\build-release-aab.ts",
+                "line": 155,
+                "kind": "node-console-log",
+                "text": "console.log(`SHA-256 (${variant.flavorName}): ${hash}`);"
+              },
+              {
+                "file": "docs\\automation\\hooks.md",
+                "line": 101,
+                "kind": "node-console-log",
+                "text": "console.log(`[my-hook] New command triggered`);"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "profitmax-pro",
+      "path": "C:\\Users\\jomie\\workspace\\profitmax-pro",
+      "audited_at": "2026-06-16T07:41:08.641193+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo with Makefile (lint target present)"
+          ],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "1 debug print(s) - low noise"
+          ],
+          "raw": {
+            "debug_count": 1,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "pai\\ceo_runner.py",
+                "line": 97,
+                "kind": "py-print",
+                "text": "print(json.dumps(result, indent=2, default=str))"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [],
+          "notes": [
+            "Python repo (11 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "pai\\llm_router.py",
+                "line": 62,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "pai\\llm_router.py",
+                "line": 88,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 11,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "pypi-index",
+      "path": "C:\\Users\\jomie\\workspace\\pypi-index",
+      "audited_at": "2026-06-16T07:41:08.797006+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "SEC-INJECTION-SINK",
+              "msg": "1 possible injection sink(s) outside tests/blog/build-scripts",
+              "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": [
+              {
+                "file": "rebuild-index.py",
+                "line": 44,
+                "kind": "py-subprocess-shell-true",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              }
+            ]
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 7,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "rebuild-index.py",
+                "line": 56,
+                "kind": "py-print",
+                "text": "print(f\"=== Building {repo} ===\")"
+              },
+              {
+                "file": "rebuild-index.py",
+                "line": 61,
+                "kind": "py-print",
+                "text": "print(f\"  WARN: {repo} build failed: {e}\")"
+              },
+              {
+                "file": "rebuild-index.py",
+                "line": 137,
+                "kind": "py-print",
+                "text": "print(f\"\\nIndex generated: {len(packages)} packages\")"
+              },
+              {
+                "file": "rebuild-index.py",
+                "line": 139,
+                "kind": "py-print",
+                "text": "print(f\"  {name}/: {len(packages[name])} files\")"
+              },
+              {
+                "file": "rebuild-index.py",
+                "line": 147,
+                "kind": "py-print",
+                "text": "print(\"No changes to commit.\")"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo (2 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [],
+            "py_files": 2,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "revenue-dashboard",
+      "path": "C:\\Users\\jomie\\workspace\\revenue-dashboard",
+      "audited_at": "2026-06-16T07:41:08.914114+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "TEST-NO-TESTS",
+              "msg": "No tests directory and no real test script",
+              "fix": "Add a tests/ folder and a test runner"
+            }
+          ],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "revenueholdings.dev",
+      "path": "C:\\Users\\jomie\\workspace\\revenueholdings.dev",
+      "audited_at": "2026-06-16T07:41:09.300067+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "blog\\preview-infra-cost-before-deploy.html",
+                "line": 142,
+                "kind": "literal-secret",
+                "in_test": false,
+                "in_blog": true,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "TEST-NO-TESTS",
+              "msg": "No tests directory and no real test script",
+              "fix": "Add a tests/ folder and a test runner"
+            }
+          ],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "4 debug print(s) - low noise"
+          ],
+          "raw": {
+            "debug_count": 4,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "blog\\click-to-mcp-usage-guide.html",
+                "line": 355,
+                "kind": "py-print",
+                "text": "print(json.dumps(tools, indent=2))"
+              },
+              {
+                "file": "blog\\click-to-mcp-usage-guide.html",
+                "line": 372,
+                "kind": "py-print",
+                "text": "print(result)</code></pre>"
+              },
+              {
+                "file": "blog\\click-vs-typer-vs-argparse-python-cli.html",
+                "line": 132,
+                "kind": "py-print",
+                "text": "print(f\"Processing {args.input} -> {args.output}\")</code></pre>"
+              },
+              {
+                "file": "blog\\five-productivity-workflows-cli-suite.html",
+                "line": 141,
+                "kind": "py-print",
+                "text": "print(json.dumps(data))"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "rtk-command-code",
+      "path": "C:\\Users\\jomie\\workspace\\rtk-command-code",
+      "audited_at": "2026-06-16T07:41:09.428027+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "TEST-NO-TESTS",
+              "msg": "No tests directory and no real test script",
+              "fix": "Add a tests/ folder and a test runner"
+            }
+          ],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "SaaS-Churn-Predictor",
+      "path": "C:\\Users\\jomie\\workspace\\SaaS-Churn-Predictor",
+      "audited_at": "2026-06-16T07:41:10.474515+00:00",
+      "overall_grade": "A",
+      "angles_passing": 8,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "tests\\security-regression-contracts.test.ts",
+                "line": 48,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@ai-sdk/openai-compatible = '^2.0.47' (floating)",
+              "fix": "Pin @ai-sdk/openai-compatible to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@ai-sdk/react = '^3.0.186' (floating)",
+              "fix": "Pin @ai-sdk/react to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@radix-ui/react-slider = '^1.3.6' (floating)",
+              "fix": "Pin @radix-ui/react-slider to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@radix-ui/react-tabs = '^1.1.13' (floating)",
+              "fix": "Pin @radix-ui/react-tabs to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@reduxjs/toolkit = '^2.12.0' (floating)",
+              "fix": "Pin @reduxjs/toolkit to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@supabase/supabase-js = '^2.105.4' (floating)",
+              "fix": "Pin @supabase/supabase-js to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@tailwindcss/postcss = '^4.3.0' (floating)",
+              "fix": "Pin @tailwindcss/postcss to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@upstash/ratelimit = '^2.0.8' (floating)",
+              "fix": "Pin @upstash/ratelimit to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.@upstash/redis = '^1.38.0' (floating)",
+              "fix": "Pin @upstash/redis to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.ai = '^6.0.180' (floating)",
+              "fix": "Pin ai to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.clsx = '^2.1.1' (floating)",
+              "fix": "Pin clsx to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.date-fns = '^4.2.0' (floating)",
+              "fix": "Pin date-fns to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.framer-motion = '^12.40.0' (floating)",
+              "fix": "Pin framer-motion to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.lucide-react = '^1.16.0' (floating)",
+              "fix": "Pin lucide-react to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.next = '^15.5.18' (floating)",
+              "fix": "Pin next to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.react = '^19.2.6' (floating)",
+              "fix": "Pin react to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.react-dom = '^19.2.6' (floating)",
+              "fix": "Pin react-dom to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.recharts = '^3.8.1' (floating)",
+              "fix": "Pin recharts to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.resend = '^3.2.0' (floating)",
+              "fix": "Pin resend to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "dependencies.sonner = '^2.0.7' (floating)",
+              "fix": "Pin sonner to an exact version for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "178 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 178,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "fix_blog_posts.py",
+                "line": 125,
+                "kind": "py-print",
+                "text": "print(f\"Written {len(new_content)} chars\")"
+              },
+              {
+                "file": "fix_blog_posts.py",
+                "line": 129,
+                "kind": "py-print",
+                "text": "print(f\"Total lines: {len(vlines)}\")"
+              },
+              {
+                "file": "fix_blog_posts.py",
+                "line": 145,
+                "kind": "py-print",
+                "text": "print(f\"Post '{keyword}': readingTime={'YES' if has_rt else 'MISSING'}\")"
+              },
+              {
+                "file": "fix_blog_posts.py",
+                "line": 148,
+                "kind": "py-print",
+                "text": "print(f\"Post '{keyword}': NOT FOUND\")"
+              },
+              {
+                "file": "fix_blog_posts.py",
+                "line": 150,
+                "kind": "py-print",
+                "text": "print(\"Last 10 lines:\")"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "ERR-BARE-EXCEPT",
+              "msg": "4 bare except/empty catch",
+              "fix": "Catch specific exceptions; log or re-raise"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "swallowers": [
+              {
+                "file": "pai\\llm_router.py",
+                "line": 164,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "pai\\churn\\tuner.py",
+                "line": 223,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "scripts\\distribution\\engagement_engine.py",
+                "line": 112,
+                "kind": "py-bare-exception"
+              },
+              {
+                "file": "scripts\\distribution\\reddit_headed.py",
+                "line": 64,
+                "kind": "py-bare-exception"
+              }
+            ],
+            "py_files": 47,
+            "has_logger_imports": true
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "schemaforge",
+      "path": "C:\\Users\\jomie\\workspace\\schemaforge",
+      "audited_at": "2026-06-16T07:41:10.763259+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "DEP-NO-LOCKFILE",
+              "msg": "No lockfile present (package-lock/pnpm-lock/yarn.lock/poetry.lock/uv.lock/Pipfile.lock)",
+              "fix": "Commit a lockfile for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "pyproject.toml references pytest"
+          ],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "5 debug print(s) - low noise"
+          ],
+          "raw": {
+            "debug_count": 5,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "scripts\\check_consistency.py",
+                "line": 16,
+                "kind": "py-print",
+                "text": "print(f\"Fixture not found: {sql_path}\")"
+              },
+              {
+                "file": "scripts\\check_consistency.py",
+                "line": 31,
+                "kind": "py-print",
+                "text": "print(f\"  OK: sql -> {fmt}\")"
+              },
+              {
+                "file": "scripts\\check_consistency.py",
+                "line": 33,
+                "kind": "py-print",
+                "text": "print(f\"  FAIL: sql -> {fmt}: {e}\")"
+              },
+              {
+                "file": "scripts\\check_consistency.py",
+                "line": 37,
+                "kind": "py-print",
+                "text": "print(f\"\\n{failures} conversion(s) failed\")"
+              },
+              {
+                "file": "scripts\\check_consistency.py",
+                "line": 40,
+                "kind": "py-print",
+                "text": "print(\"\\nAll format conversions successful\")"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo (50 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [],
+            "py_files": 50,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "scoop-bucket",
+      "path": "C:\\Users\\jomie\\workspace\\scoop-bucket",
+      "audited_at": "2026-06-16T07:41:10.890875+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": []
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 dependencies n/a"
+          ],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "TEST-NO-TESTS",
+              "msg": "No tests directory and no real test script",
+              "fix": "Add a tests/ folder and a test runner"
+            }
+          ],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "debug_count": 0,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DOC-NO-TEST-INSTR",
+              "msg": "README does not mention test command",
+              "fix": "Add test instructions"
+            }
+          ],
+          "notes": [],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Content repo (no code) \u2014 release n/a"
+          ],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "Snippet-Manager-Pro-main",
+      "path": "C:\\Users\\jomie\\workspace\\Snippet-Manager-Pro-main",
+      "audited_at": "2026-06-16T07:41:16.378445+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 1,
+      "angles": [
+        {
+          "grade": "D",
+          "findings": [
+            {
+              "id": "SEC-HARDCODED-SECRET",
+              "msg": "3 possible hardcoded secret(s) outside tests/blog/prose/example",
+              "fix": "Move to env vars / secret manager, rotate"
+            },
+            {
+              "id": "SEC-INJECTION-SINK",
+              "msg": "6 possible injection sink(s) outside tests/blog/build-scripts",
+              "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [
+              {
+                "file": "backend-example\\tests\\team-accept-invitation-contract.test.js",
+                "line": 200,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "backend-example\\tests\\team-accept-invitation-contract.test.js",
+                "line": 234,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "backend-example\\tests\\team-accept-invitation-contract.test.js",
+                "line": 250,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "backend-example\\tests\\team-accept-invitation-contract.test.js",
+                "line": 282,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "backend-example\\tests\\team-invite-license-flow.test.js",
+                "line": 144,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "backend-example\\tests\\team-invite-license-flow.test.js",
+                "line": 153,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "backend-example\\tests\\team-resend-invitation-id.test.js",
+                "line": 111,
+                "kind": "literal-secret",
+                "in_test": true,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "e2e-tests\\fixtures\\test-data.ts",
+                "line": 113,
+                "kind": "aws-access-key",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "e2e-tests\\fixtures\\test-data.ts",
+                "line": 118,
+                "kind": "openai-style-key",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              },
+              {
+                "file": "e2e-tests\\fixtures\\test-data.ts",
+                "line": 128,
+                "kind": "private-key-block",
+                "in_test": false,
+                "in_blog": false,
+                "in_prose": false,
+                "in_example": false
+              }
+            ],
+            "sinks": [
+              {
+                "file": "e2e\\extension.spec.ts",
+                "line": 360,
+                "kind": "py-eval",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "firefox-extension\\components\\workflows-dashboard.js",
+                "line": 563,
+                "kind": "sql-string-concat",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "firefox-extension\\components\\team\\handlers\\MemberActionHandlers.js",
+                "line": 399,
+                "kind": "sql-string-concat",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              },
+              {
+                "file": "scripts\\build-firefox.js",
+                "line": 134,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\build-firefox.js",
+                "line": 161,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\build-safari.js",
+                "line": 119,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\build-safari.js",
+                "line": 122,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\build-safari.js",
+                "line": 126,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\package-firefox.js",
+                "line": 52,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              },
+              {
+                "file": "scripts\\run-chrome-readiness-audit.mjs",
+                "line": 81,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": true
+              }
+            ]
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.@babel/core = '^7.23.0' (floating)",
+              "fix": "Pin @babel/core to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.@babel/preset-env = '^7.23.0' (floating)",
+              "fix": "Pin @babel/preset-env to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.@commitlint/cli = '^20.5.0' (floating)",
+              "fix": "Pin @commitlint/cli to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.@commitlint/config-conventional = '^20.5.0' (floating)",
+              "fix": "Pin @commitlint/config-conventional to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.babel-jest = '^29.7.0' (floating)",
+              "fix": "Pin babel-jest to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.bestzip = '^2.2.1' (floating)",
+              "fix": "Pin bestzip to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.esbuild = '^0.27.3' (floating)",
+              "fix": "Pin esbuild to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.eslint = '^8.56.0' (floating)",
+              "fix": "Pin eslint to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.jest = '^29.7.0' (floating)",
+              "fix": "Pin jest to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.jest-environment-jsdom = '^29.7.0' (floating)",
+              "fix": "Pin jest-environment-jsdom to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.lint-staged = '^16.4.0' (floating)",
+              "fix": "Pin lint-staged to an exact version for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEAD-DEBUG-NOISE",
+              "msg": "478 debug print/console.log statements",
+              "fix": "Remove debug prints; rely on a real logger"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "debug_count": 478,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "AGENTS.md",
+                "line": 381,
+                "kind": "node-console-log",
+                "text": "console.log('Sync result:', response);"
+              },
+              {
+                "file": "AGENTS.md",
+                "line": 939,
+                "kind": "node-console-log",
+                "text": "console.log('Sync complete:', response);"
+              },
+              {
+                "file": "AGENTS.md",
+                "line": 1237,
+                "kind": "node-console-log",
+                "text": "console.log('License:', data.license);"
+              },
+              {
+                "file": "AGENTS.md",
+                "line": 1238,
+                "kind": "node-console-log",
+                "text": "console.log('Tier:', data.license?.tier); // Should be 'pro' or 'team'"
+              },
+              {
+                "file": "AGENTS.md",
+                "line": 1248,
+                "kind": "node-console-log",
+                "text": "console.log('Last synced:', status.lastSyncedAt);"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "Python repo (6 .py files) with no logging import"
+          ],
+          "raw": {
+            "swallowers": [],
+            "py_files": 6,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    },
+    {
+      "repo": "vscode-schemaforge",
+      "path": "C:\\Users\\jomie\\workspace\\vscode-schemaforge",
+      "audited_at": "2026-06-16T07:41:16.543136+00:00",
+      "overall_grade": "A",
+      "angles_passing": 7,
+      "angles_total": 8,
+      "blockers": 0,
+      "angles": [
+        {
+          "grade": "C",
+          "findings": [
+            {
+              "id": "SEC-INJECTION-SINK",
+              "msg": "1 possible injection sink(s) outside tests/blog/build-scripts",
+              "fix": "Audit each call site, prefer parameterized queries and structured subprocess.run([...])"
+            }
+          ],
+          "notes": [],
+          "raw": {
+            "env_files": [],
+            "secrets": [],
+            "sinks": [
+              {
+                "file": "src\\cli.ts",
+                "line": 22,
+                "kind": "py-exec",
+                "in_test": false,
+                "in_blog": false,
+                "in_build": false
+              }
+            ]
+          },
+          "angle": "security"
+        },
+        {
+          "grade": "B",
+          "findings": [
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.@vscode/test-cli = '^0.0.4' (floating)",
+              "fix": "Pin @vscode/test-cli to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.@vscode/test-electron = '^2.3.8' (floating)",
+              "fix": "Pin @vscode/test-electron to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.typescript = '^5.3.0' (floating)",
+              "fix": "Pin typescript to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.eslint = '^8.50.0' (floating)",
+              "fix": "Pin eslint to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.@typescript-eslint/eslint-plugin = '^6.0.0' (floating)",
+              "fix": "Pin @typescript-eslint/eslint-plugin to an exact version for reproducible builds"
+            },
+            {
+              "id": "DEP-FLOATING",
+              "msg": "devDependencies.@typescript-eslint/parser = '^6.0.0' (floating)",
+              "fix": "Pin @typescript-eslint/parser to an exact version for reproducible builds"
+            }
+          ],
+          "notes": [],
+          "angle": "dependencies"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "tests"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "lint-types"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "3 debug print(s) - low noise"
+          ],
+          "raw": {
+            "debug_count": 3,
+            "todo_count": 0,
+            "bak": [],
+            "tmp": [],
+            "debug_samples": [
+              {
+                "file": "src\\cli.ts",
+                "line": 19,
+                "kind": "node-console-log",
+                "text": "console.log(`SchemaForge exec: ${cmd}`);"
+              },
+              {
+                "file": "src\\extension.ts",
+                "line": 11,
+                "kind": "node-console-log",
+                "text": "console.log('SchemaForge extension activating...');"
+              },
+              {
+                "file": "src\\extension.ts",
+                "line": 68,
+                "kind": "node-console-log",
+                "text": "console.log('SchemaForge extension activated.');"
+              }
+            ],
+            "todo_samples": []
+          },
+          "angle": "dead-code"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "raw": {
+            "swallowers": [],
+            "py_files": 0,
+            "has_logger_imports": false
+          },
+          "angle": "errors-logging"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [
+            "No CHANGELOG file (acceptable for early-stage projects)"
+          ],
+          "angle": "docs"
+        },
+        {
+          "grade": "A",
+          "findings": [],
+          "notes": [],
+          "angle": "release"
+        }
+      ]
+    }
+  ],
+  "elapsed_s": 68.72864890098572
+}
