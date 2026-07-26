@@ -1,6 +1,6 @@
 # Release Audit: `Agent_Memory_Final`
 
-- Path: `C:\Users\jomie\workspace\Agent_Memory_Final`
+- Path: `C:\Users\home\workspace\Agent_Memory_Final`
 - Audited: 2026-06-16T07:40:09.873235+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8

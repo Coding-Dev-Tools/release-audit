@@ -1,6 +1,6 @@
 # Release Audit: `hermes-agent-review`
 
-- Path: `C:\Users\jomie\workspace\hermes-agent-review`
+- Path: `C:\Users\home\workspace\hermes-agent-review`
 - Audited: 2026-06-16T07:40:31.820744+00:00
 - Overall grade: **B**
 - Angles passing (A/B): 6 / 8

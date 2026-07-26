@@ -1,6 +1,6 @@
 # Release Audit: `configdrift`
 
-- Path: `C:\Users\jomie\workspace\configdrift`
+- Path: `C:\Users\home\workspace\configdrift`
 - Audited: 2026-06-16T07:40:11.225403+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

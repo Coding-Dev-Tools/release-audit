@@ -1,6 +1,6 @@
 # Release Audit: `agent-os`
 
-- Path: `C:\Users\jomie\workspace\agent-os`
+- Path: `C:\Users\home\workspace\agent-os`
 - Audited: 2026-06-16T07:40:07.989259+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

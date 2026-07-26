@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 from collections import defaultdict
 
-OUT = Path(r"C:\Users\jomie\workspace\RELEASE-AUDIT\scorecards")
+OUT = Path(r"C:\Users\home\workspace\RELEASE-AUDIT\scorecards")
 filter_ids = set(sys.argv[1:]) if len(sys.argv) > 1 else None
 
 per_repo = defaultdict(list)

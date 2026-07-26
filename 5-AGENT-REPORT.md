@@ -46,7 +46,7 @@ This means every PR going forward gets an automatic release-readiness check. The
 ## Final artifact list
 
 ```
-C:\Users\jomie\workspace\RELEASE-AUDIT\
+C:\Users\home\workspace\RELEASE-AUDIT\
 ├── PROTOCOL.md                  # the 8-angle inspection protocol
 ├── audit.py                     # per-repo auditor (Windows-friendly, pure stdlib)
 ├── audit_all.py                 # driver: audits every git repo
@@ -91,7 +91,7 @@ C:\Users\jomie\workspace\RELEASE-AUDIT\
 ## How to verify
 
 ```bash
-cd C:\Users\jomie\workspace
+cd C:\Users\home\workspace
 
 # Re-run the 8-angle audit
 python RELEASE-AUDIT\audit_all.py

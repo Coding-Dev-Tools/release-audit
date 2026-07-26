@@ -1,6 +1,6 @@
 # Release Audit: `Coding-Dev-Tools-revenueholdings.dev`
 
-- Path: `C:\Users\jomie\workspace\Coding-Dev-Tools-revenueholdings.dev`
+- Path: `C:\Users\home\workspace\Coding-Dev-Tools-revenueholdings.dev`
 - Audited: 2026-06-16T07:40:10.894119+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

@@ -2,8 +2,8 @@
 import json
 from pathlib import Path
 
-OUT = Path(r"C:\Users\jomie\workspace\RELEASE-AUDIT\scorecards")
-WORKSPACE = Path(r"C:\Users\jomie\workspace")
+OUT = Path(r"C:\Users\home\workspace\RELEASE-AUDIT\scorecards")
+WORKSPACE = Path(r"C:\Users\home\workspace")
 
 for p in sorted(OUT.glob("*.json")):
     d = json.loads(p.read_text(encoding="utf-8"))

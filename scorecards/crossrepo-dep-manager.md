@@ -1,6 +1,6 @@
 # Release Audit: `crossrepo-dep-manager`
 
-- Path: `C:\Users\jomie\workspace\crossrepo-dep-manager`
+- Path: `C:\Users\home\workspace\crossrepo-dep-manager`
 - Audited: 2026-06-16T07:40:13.450732+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8

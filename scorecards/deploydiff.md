@@ -1,6 +1,6 @@
 # Release Audit: `deploydiff`
 
-- Path: `C:\Users\jomie\workspace\deploydiff`
+- Path: `C:\Users\home\workspace\deploydiff`
 - Audited: 2026-06-16T07:40:13.825599+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

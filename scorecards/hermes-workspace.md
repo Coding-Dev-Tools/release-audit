@@ -1,6 +1,6 @@
 # Release Audit: `hermes-workspace`
 
-- Path: `C:\Users\jomie\workspace\hermes-workspace`
+- Path: `C:\Users\home\workspace\hermes-workspace`
 - Audited: 2026-06-16T07:40:56.535088+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

@@ -1,6 +1,6 @@
 # Release Audit: `api-contract-guardian`
 
-- Path: `C:\Users\jomie\workspace\api-contract-guardian`
+- Path: `C:\Users\home\workspace\api-contract-guardian`
 - Audited: 2026-06-16T07:40:10.078448+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

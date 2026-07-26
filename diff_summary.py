@@ -5,7 +5,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-OUT = Path(r"C:\Users\jomie\workspace\RELEASE-AUDIT")
+OUT = Path(r"C:\Users\home\workspace\RELEASE-AUDIT")
 SCORECARDS = OUT / "scorecards"
 SUMMARY = OUT / "SUMMARY.json"
 FINAL_MD = OUT / "RELEASE-READINESS-REPORT.md"
@@ -112,7 +112,7 @@ lines.append("")
 lines.append("## How to verify")
 lines.append("")
 lines.append("```bash")
-lines.append("cd C:\\Users\\jomie\\workspace")
+lines.append("cd C:\\Users\\home\\workspace")
 lines.append("python RELEASE-AUDIT\\audit_all.py        # re-run the 8-angle audit")
 lines.append("python RELEASE-AUDIT\\build_summary.py     # rebuild the summary")
 lines.append("python RELEASE-AUDIT\\diff_summary.py      # rebuild this report")

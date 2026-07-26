@@ -1,6 +1,6 @@
 # Release Audit: `schemaforge`
 
-- Path: `C:\Users\jomie\workspace\schemaforge`
+- Path: `C:\Users\home\workspace\schemaforge`
 - Audited: 2026-06-16T07:41:10.763259+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

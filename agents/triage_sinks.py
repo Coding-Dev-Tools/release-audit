@@ -6,7 +6,7 @@ from pathlib import Path
 if len(sys.argv) < 2:
     sys.exit("usage: triage_sinks.py <repo>")
 repo = sys.argv[1]
-WORKSPACE = Path(r"C:\Users\jomie\workspace")
+WORKSPACE = Path(r"C:\Users\home\workspace")
 OUT = WORKSPACE / "RELEASE-AUDIT" / "scorecards" / f"{repo}.json"
 d = json.loads(OUT.read_text(encoding="utf-8"))
 for a in d["angles"]:

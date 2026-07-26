@@ -5,9 +5,9 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-OUT_DIR = Path(r"C:\Users\jomie\workspace\RELEASE-AUDIT\scorecards")
-SUMMARY_PATH = Path(r"C:\Users\jomie\workspace\RELEASE-AUDIT\SUMMARY.json")
-SUMMARY_MD = Path(r"C:\Users\jomie\workspace\RELEASE-AUDIT\SUMMARY.md")
+OUT_DIR = Path(r"C:\Users\home\workspace\RELEASE-AUDIT\scorecards")
+SUMMARY_PATH = Path(r"C:\Users\home\workspace\RELEASE-AUDIT\SUMMARY.json")
+SUMMARY_MD = Path(r"C:\Users\home\workspace\RELEASE-AUDIT\SUMMARY.md")
 
 data = json.loads(SUMMARY_PATH.read_text(encoding="utf-8"))
 repos = data["repos"]

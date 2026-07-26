@@ -19,7 +19,7 @@ import json
 import re
 from pathlib import Path
 
-WORKSPACE = Path(r"C:\Users\jomie\workspace")
+WORKSPACE = Path(r"C:\Users\home\workspace")
 LOG_PATH = WORKSPACE / "RELEASE-AUDIT" / "agents" / "agent-d-security.log.json"
 MD_PATH = WORKSPACE / "RELEASE-AUDIT" / "agents" / "agent-d-security.md"
 

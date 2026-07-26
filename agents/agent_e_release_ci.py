@@ -16,7 +16,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-WORKSPACE = Path(r"C:\Users\jomie\workspace")
+WORKSPACE = Path(r"C:\Users\home\workspace")
 LOG_PATH = WORKSPACE / "RELEASE-AUDIT" / "agents" / "agent-e-release-ci.log.json"
 MD_PATH = WORKSPACE / "RELEASE-AUDIT" / "agents" / "agent-e-release-ci.md"
 

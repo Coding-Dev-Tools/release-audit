@@ -1,6 +1,6 @@
 # Release Audit: `vscode-schemaforge`
 
-- Path: `C:\Users\jomie\workspace\vscode-schemaforge`
+- Path: `C:\Users\home\workspace\vscode-schemaforge`
 - Audited: 2026-06-16T07:41:16.543136+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

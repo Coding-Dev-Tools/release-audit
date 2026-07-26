@@ -20,7 +20,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-WORKSPACE = Path(r"C:\Users\jomie\workspace")
+WORKSPACE = Path(r"C:\Users\home\workspace")
 LOG_PATH = WORKSPACE / "RELEASE-AUDIT" / "PREP-LOG.md"
 
 GITIGNORE_BASE = """# Build / cache

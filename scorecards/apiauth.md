@@ -1,6 +1,6 @@
 # Release Audit: `apiauth`
 
-- Path: `C:\Users\jomie\workspace\apiauth`
+- Path: `C:\Users\home\workspace\apiauth`
 - Audited: 2026-06-16T07:40:10.267098+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8

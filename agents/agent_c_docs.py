@@ -18,7 +18,7 @@ import re
 import subprocess
 from pathlib import Path
 
-WORKSPACE = Path(r"C:\Users\jomie\workspace")
+WORKSPACE = Path(r"C:\Users\home\workspace")
 LOG_PATH = WORKSPACE / "RELEASE-AUDIT" / "agents" / "agent-c-docs.log.json"
 MD_PATH = WORKSPACE / "RELEASE-AUDIT" / "agents" / "agent-c-docs.md"
 

@@ -1,6 +1,6 @@
 # Release Audit: `revenue-dashboard`
 
-- Path: `C:\Users\jomie\workspace\revenue-dashboard`
+- Path: `C:\Users\home\workspace\revenue-dashboard`
 - Audited: 2026-06-16T07:41:08.914114+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

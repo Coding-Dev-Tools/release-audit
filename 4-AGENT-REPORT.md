@@ -119,7 +119,7 @@ RELEASE-AUDIT/
 ## How to re-run
 
 ```bash
-cd C:\Users\jomie\workspace
+cd C:\Users\home\workspace
 python RELEASE-AUDIT\audit_all.py            # ~75s for all 33 repos
 python RELEASE-AUDIT\build_summary.py
 python RELEASE-AUDIT\diff_summary.py

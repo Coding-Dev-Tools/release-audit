@@ -22,7 +22,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-WORKSPACE = Path(r"C:\Users\jomie\workspace")
+WORKSPACE = Path(r"C:\Users\home\workspace")
 LOG_PATH = WORKSPACE / "RELEASE-AUDIT" / "agents" / "agent-a-deps.log.json"
 MD_PATH = WORKSPACE / "RELEASE-AUDIT" / "agents" / "agent-a-deps.md"
 
