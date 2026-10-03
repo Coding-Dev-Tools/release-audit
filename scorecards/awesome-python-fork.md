@@ -1,6 +1,6 @@
 # Release Audit: `awesome-python-fork`
 
-- Path: `C:\Users\jomie\workspace\awesome-python-fork`
+- Path: `C:\Users\home\workspace\awesome-python-fork`
 - Audited: 2026-06-16T07:40:10.504190+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8

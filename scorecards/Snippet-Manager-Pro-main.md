@@ -1,6 +1,6 @@
 # Release Audit: `Snippet-Manager-Pro-main`
 
-- Path: `C:\Users\jomie\workspace\Snippet-Manager-Pro-main`
+- Path: `C:\Users\home\workspace\Snippet-Manager-Pro-main`
 - Audited: 2026-06-16T07:41:16.378445+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

@@ -1,6 +1,6 @@
 # Release Audit: `openclaw`
 
-- Path: `C:\Users\jomie\workspace\openclaw`
+- Path: `C:\Users\home\workspace\openclaw`
 - Audited: 2026-06-16T07:41:08.496430+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

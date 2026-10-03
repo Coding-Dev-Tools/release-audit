@@ -95,7 +95,7 @@ repo-specific decisions and are not safe to auto-apply:
 ## How to verify
 
 ```bash
-cd C:\Users\jomie\workspace
+cd C:\Users\home\workspace
 python RELEASE-AUDIT\audit_all.py        # re-run the 8-angle audit
 python RELEASE-AUDIT\build_summary.py     # rebuild the summary
 python RELEASE-AUDIT\diff_summary.py      # rebuild this report

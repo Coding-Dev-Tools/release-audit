@@ -2,7 +2,7 @@
   "repos": [
     {
       "repo": "agent-os",
-      "path": "C:\\Users\\jomie\\workspace\\agent-os",
+      "path": "C:\\Users\\home\\workspace\\agent-os",
       "audited_at": "2026-06-16T07:40:07.989259+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -97,7 +97,7 @@
     },
     {
       "repo": "Agent_Memory_Final",
-      "path": "C:\\Users\\jomie\\workspace\\Agent_Memory_Final",
+      "path": "C:\\Users\\home\\workspace\\Agent_Memory_Final",
       "audited_at": "2026-06-16T07:40:09.873235+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -279,7 +279,7 @@
     },
     {
       "repo": "api-contract-guardian",
-      "path": "C:\\Users\\jomie\\workspace\\api-contract-guardian",
+      "path": "C:\\Users\\home\\workspace\\api-contract-guardian",
       "audited_at": "2026-06-16T07:40:10.078448+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -372,7 +372,7 @@
     },
     {
       "repo": "apiauth",
-      "path": "C:\\Users\\jomie\\workspace\\apiauth",
+      "path": "C:\\Users\\home\\workspace\\apiauth",
       "audited_at": "2026-06-16T07:40:10.267098+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -476,7 +476,7 @@
     },
     {
       "repo": "awesome-python-fork",
-      "path": "C:\\Users\\jomie\\workspace\\awesome-python-fork",
+      "path": "C:\\Users\\home\\workspace\\awesome-python-fork",
       "audited_at": "2026-06-16T07:40:10.504190+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -592,7 +592,7 @@
     },
     {
       "repo": "Coding-Dev-Tools-revenueholdings.dev",
-      "path": "C:\\Users\\jomie\\workspace\\Coding-Dev-Tools-revenueholdings.dev",
+      "path": "C:\\Users\\home\\workspace\\Coding-Dev-Tools-revenueholdings.dev",
       "audited_at": "2026-06-16T07:40:10.894119+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -724,7 +724,7 @@
     },
     {
       "repo": "Coding-Dev-Tools.github.io",
-      "path": "C:\\Users\\jomie\\workspace\\Coding-Dev-Tools.github.io",
+      "path": "C:\\Users\\home\\workspace\\Coding-Dev-Tools.github.io",
       "audited_at": "2026-06-16T07:40:11.035930+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -819,7 +819,7 @@
     },
     {
       "repo": "configdrift",
-      "path": "C:\\Users\\jomie\\workspace\\configdrift",
+      "path": "C:\\Users\\home\\workspace\\configdrift",
       "audited_at": "2026-06-16T07:40:11.225403+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -917,7 +917,7 @@
     },
     {
       "repo": "context-mode",
-      "path": "C:\\Users\\jomie\\workspace\\context-mode",
+      "path": "C:\\Users\\home\\workspace\\context-mode",
       "audited_at": "2026-06-16T07:40:13.254189+00:00",
       "overall_grade": "B",
       "angles_passing": 6,
@@ -1232,7 +1232,7 @@
     },
     {
       "repo": "crossrepo-dep-manager",
-      "path": "C:\\Users\\jomie\\workspace\\crossrepo-dep-manager",
+      "path": "C:\\Users\\home\\workspace\\crossrepo-dep-manager",
       "audited_at": "2026-06-16T07:40:13.450732+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -1323,7 +1323,7 @@
     },
     {
       "repo": "datamorph",
-      "path": "C:\\Users\\jomie\\workspace\\datamorph",
+      "path": "C:\\Users\\home\\workspace\\datamorph",
       "audited_at": "2026-06-16T07:40:13.644073+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -1410,7 +1410,7 @@
     },
     {
       "repo": "deploydiff",
-      "path": "C:\\Users\\jomie\\workspace\\deploydiff",
+      "path": "C:\\Users\\home\\workspace\\deploydiff",
       "audited_at": "2026-06-16T07:40:13.825599+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -1497,7 +1497,7 @@
     },
     {
       "repo": "devforge-cli",
-      "path": "C:\\Users\\jomie\\workspace\\devforge-cli",
+      "path": "C:\\Users\\home\\workspace\\devforge-cli",
       "audited_at": "2026-06-16T07:40:13.979443+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -1592,7 +1592,7 @@
     },
     {
       "repo": "devforge-core",
-      "path": "C:\\Users\\jomie\\workspace\\devforge-core",
+      "path": "C:\\Users\\home\\workspace\\devforge-core",
       "audited_at": "2026-06-16T07:40:14.126204+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -1696,7 +1696,7 @@
     },
     {
       "repo": "envault",
-      "path": "C:\\Users\\jomie\\workspace\\envault",
+      "path": "C:\\Users\\home\\workspace\\envault",
       "audited_at": "2026-06-16T07:40:14.444813+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -1932,7 +1932,7 @@
     },
     {
       "repo": "hermes-agent-review",
-      "path": "C:\\Users\\jomie\\workspace\\hermes-agent-review",
+      "path": "C:\\Users\\home\\workspace\\hermes-agent-review",
       "audited_at": "2026-06-16T07:40:31.820744+00:00",
       "overall_grade": "B",
       "angles_passing": 6,
@@ -2298,7 +2298,7 @@
     },
     {
       "repo": "hermes-workspace",
-      "path": "C:\\Users\\jomie\\workspace\\hermes-workspace",
+      "path": "C:\\Users\\home\\workspace\\hermes-workspace",
       "audited_at": "2026-06-16T07:40:56.535088+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -2659,7 +2659,7 @@
     },
     {
       "repo": "homebrew-tap",
-      "path": "C:\\Users\\jomie\\workspace\\homebrew-tap",
+      "path": "C:\\Users\\home\\workspace\\homebrew-tap",
       "audited_at": "2026-06-16T07:40:56.667031+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -2752,7 +2752,7 @@
     },
     {
       "repo": "infra-scripts",
-      "path": "C:\\Users\\jomie\\workspace\\infra-scripts",
+      "path": "C:\\Users\\home\\workspace\\infra-scripts",
       "audited_at": "2026-06-16T07:40:56.875354+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -2883,7 +2883,7 @@
     },
     {
       "repo": "json2sql",
-      "path": "C:\\Users\\jomie\\workspace\\json2sql",
+      "path": "C:\\Users\\home\\workspace\\json2sql",
       "audited_at": "2026-06-16T07:40:57.055922+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -2970,7 +2970,7 @@
     },
     {
       "repo": "keybridge",
-      "path": "C:\\Users\\jomie\\workspace\\keybridge",
+      "path": "C:\\Users\\home\\workspace\\keybridge",
       "audited_at": "2026-06-16T07:40:57.229533+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -3082,7 +3082,7 @@
     },
     {
       "repo": "Obsidian-Vault-Local",
-      "path": "C:\\Users\\jomie\\workspace\\Obsidian-Vault-Local",
+      "path": "C:\\Users\\home\\workspace\\Obsidian-Vault-Local",
       "audited_at": "2026-06-16T07:40:57.858553+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -3323,7 +3323,7 @@
     },
     {
       "repo": "openclaw",
-      "path": "C:\\Users\\jomie\\workspace\\openclaw",
+      "path": "C:\\Users\\home\\workspace\\openclaw",
       "audited_at": "2026-06-16T07:41:08.496430+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -3550,7 +3550,7 @@
     },
     {
       "repo": "profitmax-pro",
-      "path": "C:\\Users\\jomie\\workspace\\profitmax-pro",
+      "path": "C:\\Users\\home\\workspace\\profitmax-pro",
       "audited_at": "2026-06-16T07:41:08.641193+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -3653,7 +3653,7 @@
     },
     {
       "repo": "pypi-index",
-      "path": "C:\\Users\\jomie\\workspace\\pypi-index",
+      "path": "C:\\Users\\home\\workspace\\pypi-index",
       "audited_at": "2026-06-16T07:41:08.797006+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -3790,7 +3790,7 @@
     },
     {
       "repo": "revenue-dashboard",
-      "path": "C:\\Users\\jomie\\workspace\\revenue-dashboard",
+      "path": "C:\\Users\\home\\workspace\\revenue-dashboard",
       "audited_at": "2026-06-16T07:41:08.914114+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -3885,7 +3885,7 @@
     },
     {
       "repo": "revenueholdings.dev",
-      "path": "C:\\Users\\jomie\\workspace\\revenueholdings.dev",
+      "path": "C:\\Users\\home\\workspace\\revenueholdings.dev",
       "audited_at": "2026-06-16T07:41:09.300067+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -4017,7 +4017,7 @@
     },
     {
       "repo": "rtk-command-code",
-      "path": "C:\\Users\\jomie\\workspace\\rtk-command-code",
+      "path": "C:\\Users\\home\\workspace\\rtk-command-code",
       "audited_at": "2026-06-16T07:41:09.428027+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -4112,7 +4112,7 @@
     },
     {
       "repo": "SaaS-Churn-Predictor",
-      "path": "C:\\Users\\jomie\\workspace\\SaaS-Churn-Predictor",
+      "path": "C:\\Users\\home\\workspace\\SaaS-Churn-Predictor",
       "audited_at": "2026-06-16T07:41:10.474515+00:00",
       "overall_grade": "A",
       "angles_passing": 8,
@@ -4366,7 +4366,7 @@
     },
     {
       "repo": "schemaforge",
-      "path": "C:\\Users\\jomie\\workspace\\schemaforge",
+      "path": "C:\\Users\\home\\workspace\\schemaforge",
       "audited_at": "2026-06-16T07:41:10.763259+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -4486,7 +4486,7 @@
     },
     {
       "repo": "scoop-bucket",
-      "path": "C:\\Users\\jomie\\workspace\\scoop-bucket",
+      "path": "C:\\Users\\home\\workspace\\scoop-bucket",
       "audited_at": "2026-06-16T07:41:10.890875+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -4579,7 +4579,7 @@
     },
     {
       "repo": "Snippet-Manager-Pro-main",
-      "path": "C:\\Users\\jomie\\workspace\\Snippet-Manager-Pro-main",
+      "path": "C:\\Users\\home\\workspace\\Snippet-Manager-Pro-main",
       "audited_at": "2026-06-16T07:41:16.378445+00:00",
       "overall_grade": "A",
       "angles_passing": 7,
@@ -4936,7 +4936,7 @@
     },
     {
       "repo": "vscode-schemaforge",
-      "path": "C:\\Users\\jomie\\workspace\\vscode-schemaforge",
+      "path": "C:\\Users\\home\\workspace\\vscode-schemaforge",
       "audited_at": "2026-06-16T07:41:16.543136+00:00",
       "overall_grade": "A",
       "angles_passing": 7,

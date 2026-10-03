@@ -1,6 +1,6 @@
 # Release Audit: `profitmax-pro`
 
-- Path: `C:\Users\jomie\workspace\profitmax-pro`
+- Path: `C:\Users\home\workspace\profitmax-pro`
 - Audited: 2026-06-16T07:41:08.641193+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8

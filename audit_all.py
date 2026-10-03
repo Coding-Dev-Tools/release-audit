@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Driver: audit every git repo in C:\\Users\\jomie\\workspace."""
+"""Driver: audit every git repo in the user's workspace."""
 from __future__ import annotations
 import json
 import os
@@ -8,7 +8,7 @@ import sys
 import time
 from pathlib import Path
 
-WORKSPACE = Path(r"C:\Users\jomie\workspace")
+WORKSPACE = Path.home() / "workspace"
 AUDIT_SCRIPT = WORKSPACE / "RELEASE-AUDIT" / "audit.py"
 OUT_DIR = WORKSPACE / "RELEASE-AUDIT" / "scorecards"
 SUMMARY_PATH = WORKSPACE / "RELEASE-AUDIT" / "SUMMARY.json"

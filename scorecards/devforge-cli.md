@@ -1,6 +1,6 @@
 # Release Audit: `devforge-cli`
 
-- Path: `C:\Users\jomie\workspace\devforge-cli`
+- Path: `C:\Users\home\workspace\devforge-cli`
 - Audited: 2026-06-16T07:40:13.979443+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

@@ -1,6 +1,6 @@
 # Release Audit: `SaaS-Churn-Predictor`
 
-- Path: `C:\Users\jomie\workspace\SaaS-Churn-Predictor`
+- Path: `C:\Users\home\workspace\SaaS-Churn-Predictor`
 - Audited: 2026-06-16T07:41:10.474515+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8

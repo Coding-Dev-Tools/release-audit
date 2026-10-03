@@ -1,6 +1,6 @@
 # Release Audit: `Coding-Dev-Tools.github.io`
 
-- Path: `C:\Users\jomie\workspace\Coding-Dev-Tools.github.io`
+- Path: `C:\Users\home\workspace\Coding-Dev-Tools.github.io`
 - Audited: 2026-06-16T07:40:11.035930+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

@@ -1,6 +1,6 @@
 # Release Audit: `infra-scripts`
 
-- Path: `C:\Users\jomie\workspace\infra-scripts`
+- Path: `C:\Users\home\workspace\infra-scripts`
 - Audited: 2026-06-16T07:40:56.875354+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8

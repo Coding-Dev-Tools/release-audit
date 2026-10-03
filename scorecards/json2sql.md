@@ -1,6 +1,6 @@
 # Release Audit: `json2sql`
 
-- Path: `C:\Users\jomie\workspace\json2sql`
+- Path: `C:\Users\home\workspace\json2sql`
 - Audited: 2026-06-16T07:40:57.055922+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

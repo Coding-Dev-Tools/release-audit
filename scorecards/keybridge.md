@@ -1,6 +1,6 @@
 # Release Audit: `keybridge`
 
-- Path: `C:\Users\jomie\workspace\keybridge`
+- Path: `C:\Users\home\workspace\keybridge`
 - Audited: 2026-06-16T07:40:57.229533+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

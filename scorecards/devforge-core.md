@@ -1,6 +1,6 @@
 # Release Audit: `devforge-core`
 
-- Path: `C:\Users\jomie\workspace\devforge-core`
+- Path: `C:\Users\home\workspace\devforge-core`
 - Audited: 2026-06-16T07:40:14.126204+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8

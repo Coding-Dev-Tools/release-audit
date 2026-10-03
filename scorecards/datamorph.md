@@ -1,6 +1,6 @@
 # Release Audit: `datamorph`
 
-- Path: `C:\Users\jomie\workspace\datamorph`
+- Path: `C:\Users\home\workspace\datamorph`
 - Audited: 2026-06-16T07:40:13.644073+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 7 / 8

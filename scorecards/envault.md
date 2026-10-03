@@ -1,6 +1,6 @@
 # Release Audit: `envault`
 
-- Path: `C:\Users\jomie\workspace\envault`
+- Path: `C:\Users\home\workspace\envault`
 - Audited: 2026-06-16T07:40:14.444813+00:00
 - Overall grade: **A**
 - Angles passing (A/B): 8 / 8
